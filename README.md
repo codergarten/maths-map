@@ -65,7 +65,9 @@ npm run build     # type-check + production build → dist/
 npm run preview   # serve the production build locally
 ```
 
-**Render (free tier):** New → Static Site → connect this repo → Build Command `npm ci && npm run build` → Publish Directory `dist` → deploy. That's it.
+**GitHub Pages (already set up):** every push to `main` runs `.github/workflows/deploy-pages.yml`, which builds with `VITE_BASE=/maths-map/` and deploys `dist/` to GitHub Pages. Live at: <https://codergarten.github.io/maths-map/>
+
+**Render:** New → Static Site → connect this repo → Build Command `npm ci && npm run build` → Publish Directory `dist` → deploy.
 
 ## Project layout
 

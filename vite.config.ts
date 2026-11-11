@@ -2,7 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
+// GitHub Pages serves from https://<owner>.github.io/<repo>/ — CI sets VITE_BASE=/maths-map/.
+// Local builds default to relative './' so the dist/ folder works from any static path.
+const base: string = process.env.VITE_BASE ?? './';
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     VitePWA({
