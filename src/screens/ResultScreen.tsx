@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import confetti from 'canvas-confetti';
-import { GUIDANCE, ITEMS, PROFICIENCY_LABEL, strandOfCode } from '../curriculum';
+import { getLevelCtx, PROFICIENCY_LABEL } from '../curriculum';
 import { scoreSession } from '../scoring';
 import type { Session } from '../types';
 import type { Proficiency } from '../types';
@@ -19,6 +19,7 @@ export default function ResultScreen({
   const session = sessions.find((s) => s.id === sessionId);
   if (!session) return <div className="card"><p>Session not found.</p><button className="btn btn-primary" onClick={onDone}>Done</button></div>;
 
+  const ctx = getLevelCtx(session.levelId);
   const result = scoreSession(session);
 
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function ResultScreen({
         <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink-soft)', textTransform: 'uppercase', letterSpacing: 1 }}>Check-in complete · {dateStr}</div>
         <div className="pct">{result.overallPercent}%</div>
         <p style={{ fontSize: 12, color: 'var(--ink-soft)', margin: '2px 0 0' }}>Grow-ups use this to pick better practice games — it isn&rsquo;t school, it isn&rsquo;t a verdict.</p>
-        <div style={{ color: 'var(--ink-soft)', fontSize: 14, margin: '4px 0 12px' }}>across all 15 Level 1 content codes</div>
+        <div style={{ color: 'var(--ink-soft)', fontSize: 14, margin: '4px 0 12px' }}>across every {ctx.label} content description</div>
         <div className="coverage-row">
           <div className="coverage-chip"><div className="n" style={{ color: 'var(--secure)' }}>{result.secureCount}</div><div className="l">Strong</div></div>
           <div className="coverage-chip"><div className="n" style={{ color: 'var(--developing)' }}>{result.developingCount}</div><div className="l">Developing</div></div>
@@ -83,15 +84,15 @@ export default function ResultScreen({
           {gaps.slice(0, 3).map((g) => (
             <div key={g.code} className="card" style={{ borderLeft: '6px solid var(--emerging)' }}>
               <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--emerging)', textTransform: 'uppercase', letterSpacing: 1 }}>Needs work · {g.code}</div>
-              <div style={{ fontWeight: 800, margin: '4px 0' }}>{GUIDANCE[g.code]?.plainWords}</div>
-              <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}><b>Try this at home:</b> {GUIDANCE[g.code]?.activities[0]}</div>
+              <div style={{ fontWeight: 800, margin: '4px 0' }}>{ctx.guidance[g.code]?.plainWords}</div>
+              <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}><b>Try this at home:</b> {ctx.guidance[g.code]?.activities[0]}</div>
             </div>
           ))}
           {gaps.length === 0 && developing.slice(0, 3).map((g) => (
             <div key={g.code} className="card" style={{ borderLeft: '6px solid var(--developing)' }}>
               <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--developing)', textTransform: 'uppercase', letterSpacing: 1 }}>Developing · {g.code}</div>
-              <div style={{ fontWeight: 800, margin: '4px 0' }}>{GUIDANCE[g.code]?.plainWords}</div>
-              <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}><b>Try this at home:</b> {GUIDANCE[g.code]?.activities[0]}</div>
+              <div style={{ fontWeight: 800, margin: '4px 0' }}>{ctx.guidance[g.code]?.plainWords}</div>
+              <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}><b>Try this at home:</b> {ctx.guidance[g.code]?.activities[0]}</div>
             </div>
           ))}
         </>
@@ -99,8 +100,8 @@ export default function ResultScreen({
 
       {gaps.length === 0 && developing.length === 0 && (
         <div className="card" style={{ borderLeft: '6px solid var(--secure)' }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--secure)', textTransform: 'uppercase', letterSpacing: 1 }}>Level 1 looking strong</div>
-          <div style={{ fontWeight: 800, marginTop: 4 }}>Every code came out Secure. Lovely — Level 2 is opening up.</div>
+          <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--secure)', textTransform: 'uppercase', letterSpacing: 1 }}>{ctx.label} looking strong</div>
+          <div style={{ fontWeight: 800, marginTop: 4 }}>Every code came out Secure. Lovely — {ctx.id === 'level-1' ? 'Level 2 is opening up' : 'the next level is opening up'}.</div>
           <div style={{ fontSize: 13, color: 'var(--ink-soft)', marginTop: 6 }}>Keep the joy in it: keep playing number and shape games; the school will stretch them from here.</div>
         </div>
       )}
@@ -113,7 +114,7 @@ export default function ResultScreen({
         <button className="btn btn-ghost btn-block" onClick={onDone}>Back to home</button>
       </div>
       <p style={{ textAlign: 'center', fontSize: 11, color: 'var(--ink-soft)', marginTop: 12 }}>
-        {ITEMS.length} questions · no timers · VCAA Level 1 content descriptions (© VCAA, CC-BY-NC 3.0)
+        {ctx.items.length} questions · no timers · VCAA content descriptions (© VCAA, CC-BY-NC 3.0)
       </p>
     </>
   );

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ACHIEVEMENT_STANDARD, GUIDANCE, CODE_MAP, CODES, PROFICIENCY_LABEL } from '../curriculum';
+import { getLevelCtx, PROFICIENCY_LABEL } from '../curriculum';
 import { latestCompletedSession, scoreSession } from '../scoring';
 import type { Profile, Session } from '../types';
 import type { Proficiency } from '../types';
@@ -15,12 +15,13 @@ export default function DashboardScreen({
 }) {
   const [openCode, setOpenCode] = useState<string | null>(null);
   const mine = sessions.filter((s) => s.profileId === profile.id);
-  const last = latestCompletedSession(mine, profile.id);
+  const last = latestCompletedSession(mine, profile.id, profile.levelId);
   const result = last ? scoreSession(last) : null;
+  const ctx = getLevelCtx(profile.levelId);
   const scoreByCode = new Map(result?.codeScores.map((c) => [c.code, c]) ?? []);
 
-  const openGuidance = openCode ? GUIDANCE[openCode] : null;
-  const openVcaa = openCode ? CODE_MAP.get(openCode) : null;
+  const openGuidance = openCode ? ctx.guidance[openCode] : null;
+  const openVcaa = openCode ? ctx.codeMap.get(openCode) : null;
   const openScore = openCode ? scoreByCode.get(openCode) : null;
 
   return (
@@ -36,7 +37,7 @@ export default function DashboardScreen({
       {!result && (
         <div className="card">
           <strong>No check-in yet.</strong>
-          <p style={{ margin: '6px 0 0', fontSize: 14, color: 'var(--ink-soft)' }}>Do the first Level 1 check-in from {profile.name}&rsquo;s home screen and this dashboard fills in.</p>
+          <p style={{ margin: '6px 0 0', fontSize: 14, color: 'var(--ink-soft)' }}>Do the first check-in from {profile.name}&rsquo;s home screen and this dashboard fills in.</p>
           <button className="btn btn-primary" style={{ marginTop: 12 }} onClick={onBack}>← Back</button>
         </div>
       )}
@@ -44,10 +45,10 @@ export default function DashboardScreen({
       {result && (
         <>
           <div className="std-box">
-            <b>Achievement standard (end of Level 1)</b>
-            <div style={{ marginTop: 6 }}>{ACHIEVEMENT_STANDARD}</div>
+            <b>Achievement standard (end of {ctx.label})</b>
+            <div style={{ marginTop: 6 }}>{ctx.achievementStandard}</div>
             <div style={{ marginTop: 10, fontSize: 12, fontWeight: 700 }}>
-              Hitting it in {result.secureCount}/{CODES.length} content codes — everything else is listed below as Developing or Needs work.
+              Hitting it in {result.secureCount}/{ctx.codes.length} content codes — everything else is listed below as Developing or Needs work.
             </div>
           </div>
 
@@ -83,7 +84,7 @@ export default function DashboardScreen({
                 <div className="strand-bar"><div style={{ width: `${strand.percent}%` }} /></div>
                 <div className="code-grid">
                   {strand.codes.map((c) => {
-                    const vcaa = CODE_MAP.get(c.code);
+                    const vcaa = ctx.codeMap.get(c.code);
                     return (
                       <button key={c.code} className={`code-chip ${c.status}`} onClick={() => setOpenCode(c.code)}>
                         <span className="code-id">{c.code}</span>
@@ -104,7 +105,7 @@ export default function DashboardScreen({
         <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label={`${openCode} details`} onClick={() => setOpenCode(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setOpenCode(null)} aria-label="Close">✕</button>
-            <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--primary-dark)', textTransform: 'uppercase', letterSpacing: 1 }}>{openCode} · Level 1</div>
+            <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--primary-dark)', textTransform: 'uppercase', letterSpacing: 1 }}>{openCode} · {ctx.label}</div>
             <h3>{openGuidance?.plainWords}</h3>
             {openScore && (
               <p style={{ marginTop: -4 }}>

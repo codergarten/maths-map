@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "level": "Level 2",
+    "licence": "Original Maths Map content. Curriculum references © VCAA, CC-BY-NC 3.0."
+  },
+  "guidance": {
+    "VC2M2N01": {
+      "plainWords": "Read, write and order numbers to 1000 — including zeros in different places and numbers that look/sound similar (808, 880, 818, 881).",
+      "whyItMatters": "Level 3 (thousands, then ten-thousands) and all written arithmetic procedures are built on this fluency.",
+      "watchFor": "Reading 808 as 'eight hundred and eighty'; thinking 881 > 8808 confusions; ignoring zero (31 'missing' the zero-decade problem).",
+      "activities": [
+        "Hundreds chart puzzles: build 0-999 in pieces and fit them together — ask them to find where pieces go.",
+        "Broken number line: draw one with 1800 on one end and 2200 on the other, ask them to fill in the missing decades.",
+        "Recycling rally: collect bottle tops/hair ties, group into ones, tens and hundreds, then build numbers with them."
+      ]
+    },
+    "VC2M2N02": {
+      "plainWords": "Split numbers into parts: 245 as 24 tens and 5 ones, or 2 hundreds and 45 ones. What the zero in 307 means.",
+      "whyItMatters": "Standard written addition/subtraction algorithms are pure renaming.",
+      "watchFor": "Not seeing the zero as 'no tens' (307 misread as 37-like); thinking renaming changes the value.",
+      "activities": [
+        "Rename race: say '245', ask for 24 tens-and-5-ones, 2-hundreds-and-45-ones, etc. — trading numeral-for-materials as you go.",
+        "Craft-stick bundles: bundle sticks in tens, make 326 three different ways (3-2-6, 32-and-6, 3-and-26).",
+        "Zero detective: write 307, 370, 703, 730 — ask what the zero means in each."
+      ]
+    },
+    "VC2M2N03": {
+      "plainWords": "What a half is, and how repeated halving gives quarters, then eighths — of shapes, sets and measures.",
+      "whyItMatters": "Fractions in Level 3+ and measurement of length/capacity both grow from this.",
+      "watchFor": "Thinking bigger denominator = bigger piece; counting parts without equal-size checks.",
+      "activities": [
+        "Paper-strip folding: fold in half, half again, half again — name the parts (half, quarter, eighth) and compare their sizes.",
+        "Sharing equal sets: compare half of 12 washers with half of 8 bolts — both 'one-half', different counts.",
+        "Half pizza Friday: cut the pizza in halves, quarters, eighths — what's the same about each eighth?"
+      ]
+    },
+    "VC2M2N04": {
+      "plainWords": "Add and subtract one- and two-digit numbers using strategies, and write a number sentence for a story.",
+      "whyItMatters": "Written column subtraction arrives in Level 3 — this mental phase IS the foundation.",
+      "watchFor": "Bridging to 10 weakness (7+8 stalls); not using near doubles; misreading what the story asks.",
+      "activities": [
+        "Near doubles: '7 + 8? That's 7 + 7 + 1.' Play bean-bag near-doubles toss and add.",
+        "Gift-card problem: '$100 gift card, spent $38 on shoes and $15 on a tee — what's left?' — let them use any strategy, then write the number sentence.",
+        "Bridging tens: 56 + 37 — say it as 50 + 30 = 80, 6 + 7 = 13, so 93."
+      ]
+    },
+    "VC2M2N05": {
+      "plainWords": "Multiply (equal groups, arrays, repeated addition) and divide (sharing vs grouping) with one-digit numbers.",
+      "whyItMatters": "Arrays are the bridge to multiplication tables and later algebraic thinking.",
+      "watchFor": "Sharing vs grouping confusion (12÷4 for dividers vs groups of 4); fingers-counting every product.",
+      "activities": [
+        "Array hunt: make different arrays for 12 (2×6, 3×4, 4×3, 6×2, 12×1) with pasta or counters.",
+        "$36 prize: 'How should we share $36 between 4 people? How much each?' Then groups of 4 people with the same $36.",
+        "Think Board play: draw problem, number sentence, materials, answer — labelling the story context."
+      ]
+    },
+    "VC2M2N06": {
+      "plainWords": "Real-world add/multiply problems — choose the right operation and explain it in context.",
+      "whyItMatters": "Word problems are where most adults' maths anxiety shows — strong now, calm forever.",
+      "watchFor": "Reading the question but not the operation; giving a number without units ('9' vs '$9').",
+      "activities": [
+        "Play shop: buy $5 items with $10/$20 notes — which operation each step?",
+        "Fundraiser: 'If every kid in class (25) brings $2, how much?' — let them discover multiplication.",
+        "Team maker: 'How many teams of 4 from our class?' Use whiteboard tally + divide."
+      ]
+    },
+    "VC2M2A01": {
+      "plainWords": "Patterns that grow by a fixed amount (3, 5, 7...) — describe the rule, continue it, find missing elements.",
+      "whyItMatters": "Arithmetic sequences in Level 3+ and the whole idea of a relationship.",
+      "watchFor": "Seeing 'same pairs' in odd/even patterns instead of constant step; losing place in a growing pattern.",
+      "activities": [
+        "Matchstick triangles: 3 sticks, +2 each time (shared side) — predict the 6th triangle before building.",
+        "Car windows: 'How many windows in 1 train carriage, 2, 3...?' chart on a table.",
+        "Block tower race: 2, 5, 8… (add 3) — copy and extend with LEGO; find the 6th tower."
+      ]
+    },
+    "VC2M2A02": {
+      "plainWords": "Instant recall of add-to-20 facts AND the matching subtractions (8+7=15, so 15−7=8).",
+      "whyItMatters": "Fluency liberates working memory — Level 3 written algorithms and multi-step problems demand it.",
+      "watchFor": "Counting from 1 to reach 9+9; no carry-over facts; subtraction not retrieved from addition.",
+      "activities": [
+        "Ten-frame flashcards: make 8+7 visible, cover, re-derive, then DERIVE 15−7.",
+        "Fact-family trio: '8+7=15, and...? And...?' (15−7, 15−8). Stock the pantry fridge with a list.",
+        "Systematic split: 'How many ways can 10 birds be spread over two trees?' — lists all partitions."
+      ]
+    },
+    "VC2M2A03": {
+      "plainWords": "Fluent doubling/halving and the twos multiplication/division facts (2×7=14, 18÷2=9).",
+      "whyItMatters": "Doubles are the gateway to all multiplication tables; halving builds division sense.",
+      "watchFor": "Halving odd numbers confusion; 'double' vs 'add the same' blur; not seeing 2×7 = 7×2.",
+      "activities": [
+        "Double-or-halve race: dice roll — choose double or halve to race to 24; near-doubles practice to 20.",
+        "Hundreds-chart doubles: colour even numbers after doubling from 1–20.",
+        "Egg carton halving: 12 eggs — halve the group, halve again."
+      ]
+    },
+    "VC2M2A04": {
+      "plainWords": "Multiplication as repeated addition (4+4+4); division as repeated subtraction (12−3−3−3−3) or equal groups.",
+      "whyItMatters": "Connects skip counting to operations — the conceptual spine before formal algorithms.",
+      "watchFor": "Multiplication as multiplication of ANY numbers without grouping insight; 'division means sharing only'.",
+      "activities": [
+        "Beading bracelets: 4 beads × 3 rows — what does the bracelet look like?",
+        "Repeated subtraction printout: start at 12, subtract 3 each time, count how many hops (division in disguise).",
+        "Show 3 jumps of 4 on a number line — write the matching multiplication sentence."
+      ]
+    },
+    "VC2M2M01": {
+      "plainWords": "Measuring with informal units — small units for accuracy, big units for big things; same unit always.",
+      "whyItMatters": "Transition to formal cm/m in Level 3 rests on this measurement judgement.",
+      "watchFor": "Different units mixed; not realising smaller units = bigger count; gaps in informal measurement chains.",
+      "activities": [
+        "Hand-vs-finger measurement of the rug: why do the numbers differ? Which is more accurate?",
+        "Sand spoon vs cup: which container holds most sand — pour to prove it.",
+        "Body-part measurement: hands, spans, feet — how Aboriginal and Torres Strait Islander Peoples measure with body parts."
+      ]
+    },
+    "VC2M2M02": {
+      "plainWords": "Halves, quarters, eighths in real life — food, time (quarter past), measuring cups, paper folding.",
+      "whyItMatters": "Fractions enter measurement first (cup measures) — the most natural fraction entry point.",
+      "watchFor": "Confusing 'quarter to' vs 'quarter past'; not knowing quarters of time (15 minutes).",
+      "activities": [
+        "Pizza fractions: cut pizzas/sandwiches in halves, quarters, eighths — 'fair shares' talk.",
+        "Measuring cups in the kitchen: half cup, quarter cup — pour them into each other.",
+        "Halftime sirens: discuss AFL quarter time and what 'half time' means in a footy game."
+      ]
+    },
+    "VC2M2M03": {
+      "plainWords": "Reading calendars — find dates, count days between events, plan 2 weeks ahead.",
+      "whyItMatters": "Calendar arithmetic is addition in disguise — and genuinely useful for parties and holidays.",
+      "watchFor": "Counting from 1 instead of jumping by 7; month boundary errors (Jan 31 → Feb 1).",
+      "activities": [
+        "Family countdown: mark a holiday/birthday, count days to it each week together.",
+        "School-days counter: holidays, sports carnivals, assemblies — fill in a shared class calendar.",
+        "Days left in the year: use the calendar + addition to solve 'How many days until Dec 31?'"
+      ]
+    },
+    "VC2M2M04": {
+      "plainWords": "Reading an analog clock — hour, half-hour, quarter past/to.",
+      "whyItMatters": "Estimating time is a life skill (screens, buses, sport) — digital clocks hide the structure.",
+      "watchFor": "Swapping hands; reading 7:30 as 'half past six' direction muddle; 'quarter past' vs 'quarter to' confused.",
+      "activities": [
+        "Paper-plate clock: make one, set 3:00, 7:30, 9:15, 5:45 — explain the hands each time.",
+        "'When does the big hand point down?' — spot the clock at half past every day this week.",
+        "Halftime sirens connection: 'quarter-time, half-time' in AFL mapped to the clock face."
+      ]
+    },
+    "VC2M2M05": {
+      "plainWords": "Recognising quarter, half, three-quarter and full turns — in clocks, doors, dances.",
+      "whyItMatters": "Angles are silent geometry — this seeds perpendicular/parallel intuition and compass sense later.",
+      "watchFor": "Clockwise vs anticlockwise blur; not connecting quarter turn to 90° structure of a clock.",
+      "activities": [
+        "Turn-dance: call quarter/half/three-quarter/full turns and dance them; swap roles.",
+        "Turn hunt at home: tap handle, door knob, peanut-butter lid, bike wheel — which turns how much?",
+        "Clock-hands turns: relate minute hand's quarter/half/full turns to 'quarter past', 'half past', 'o'clock'."
+      ]
+    },
+    "VC2M2SP01": {
+      "plainWords": "Shape names and features — number of sides, straight vs curved, parallel/opposite.",
+      "whyItMatters": "Polygons and properties in Level 3+ build directly on this vocabulary.",
+      "watchFor": "'Round' vs 'curved' confusion; all quadrilaterals called 'squares'; not flipping shape in orientation.",
+      "activities": [
+        "Sporting-field labels: draw a basketball court, label sides, circles, lines (straight/curved).",
+        "Orientation game: rotate shapes — does a triangle stop being a triangle upside-down?",
+        "Signage hunt: find curved vs straight shapes on street signs and boxes."
+      ]
+    },
+    "VC2M2SP02": {
+      "plainWords": "Using maps and grids — seating plans, 4×4 floor mats, directions to find things.",
+      "whyItMatters": "Mapping is the bridge to coordinates (x,y) and the geometry of position.",
+      "watchFor": "Left/right reversal from the map-reader's perspective; no scale idea ('one square = one step').",
+      "activities": [
+        "Grid treasure hunt: tape a 4×4 floor grid, hide a small toy, give and take directions.",
+        "Map the house: draw a rough map of your home; 'where is the lounge?' with compass words.",
+        "Robot toy (or you be the robot): program simple paths on a street scene."
+      ]
+    },
+    "VC2M2ST01": {
+      "plainWords": "Pose a question, collect data (surveys, observation, digital tools), sort into categories, record in tables/lists.",
+      "whyItMatters": "Data literacy is the adult skill of reading graphs/polls without being fooled.",
+      "watchFor": "Categories decided after collecting (data won't fit); double-counting a person.",
+      "activities": [
+        "Transport survey: 'How does everyone get to school/work?' — walk/ride/car/other.",
+        "Weekly observation: 'How do students arrive at school?' — tally for a fortnight, trends emerge.",
+        "Rubbish audit: sort a bag of rubbish into 'bin', 'recycle', 'compost' — does it answer a question?"
+      ]
+    },
+    "VC2M2ST02": {
+      "plainWords": "Show the data two ways — lists, tables, picture graphs, column graphs — compare them, say which tells the story better.",
+      "whyItMatters": "Comparing representations IS statistical reasoning — not just drawing bars.",
+      "watchFor": "Building a display then being unable to read it; choosing a graph type that doesn't fit the question.",
+      "activities": [
+        "Two displays, one story: make a tally AND a sticker chart for favourite fruit; compare what each shows.",
+        "Column vs pictograph: draw a small column graph and a picture graph of the same data; which do you prefer and why?",
+        "Excel hour (if they know): type the fruit survey into a spreadsheet, insert a column chart — compare with hand-drawn."
+      ]
+    }
+  }
+}

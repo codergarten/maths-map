@@ -33,6 +33,8 @@ export interface Profile {
   emoji: string;
   colour: string;
   createdAt: string;
+  /** Which VC2 Mathematics level this child is checked against. Defaults to Level 1. */
+  levelId?: 'level-1' | 'level-2';
 }
 
 export interface SessionResponse {

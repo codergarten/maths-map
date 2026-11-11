@@ -1,10 +1,10 @@
-# Maths Map 🧭
+# Maths Map 🗺️
 
 > See where your child stands in maths — and the next steps to grow.
 
-**🇦🇺 Maths Map is built for the Australian context — specifically the Victorian Curriculum.** It maps your child against the **Victorian Curriculum F–10 (Version 2.0), Mathematics**, as published by the **Victorian Curriculum and Assessment Authority (VCAA)**. Level 1 (≈ Year 1) in this version. Source of truth, always current: <https://f10.vcaa.vic.edu.au/>
+**🇦🇺 Maths Map is built for the Australian context — specifically the Victorian Curriculum.** It maps your child against the **Victorian Curriculum F–10 (Version 2.0), Mathematics**, as published by the **Victorian Curriculum and Assessment Authority (VCAA)** — Level 1 and Level 2 (≈ Years 1 and 2) today. Source of truth, always current: <https://f10.vcaa.vic.edu.au/>
 
-**Maths Map is a free, mobile-first web app for parents** of children in the early years of Australian schooling. It maps your child against the **Victorian Curriculum F–10 (2.0), Mathematics, Level 1** (≈ Year 1), shows you what they know securely, what's wobbly, and gives you simple at-home ways to build it.
+**Maths Map is a free, mobile-first web app for parents** of children in the early years of Australian schooling. Pick Level 1 or Level 2 per child, see what they know securely, what's wobbly, and get simple at-home ways to build it.
 
 Sit with your child, run the 25–35 minute check-in (or pause and come back), and get a gap report you can act on — or take to the next parent–teacher night.
 
@@ -24,9 +24,9 @@ Sit with your child, run the 25–35 minute check-in (or pause and come back), a
 
 ## What it does
 
-- **Multi-child profiles** — every child in the family, their own history, edit or erase per-child check-ins
+- **Multi-child profiles** — every child in the family, their own history, edit or erase per-child check-ins, and a per-child **Level 1 / Level 2** toggle
 - **Made for touch** — big targets, offline-capable, installable, playful confetti at the finish line
-- **A full Level 1 check-in** — 75 items across the five Level 1 strands (Number, Algebra, Measurement, Space, Statistics); on-screen taps for your child, hands-on "kitchen table" tasks observed by you (counting buttons, play shop, surveys)
+- **A full check-in per level** — Level 1: 75 items (5 strands, 15 codes); Level 2: 95 items (19 codes); on-screen taps for your child + hands-on "kitchen table" tasks you observe
 - **A parent-friendly gap report** — per content description: what they can do, what to watch, and 3 at-home activities (built from the VCAA elaborations, translated for the kitchen table)
 - **Term-by-term tracking** — same items every sitting, so you can actually see the line move
 - **A printable A4 report** — strand summary, strengths, focus areas — for parent–teacher night
@@ -36,7 +36,7 @@ Sit with your child, run the 25–35 minute check-in (or pause and come back), a
 
 ## What it is **not** (please read)
 
-- **Not a validated diagnostic or standardised test** (like NAPLAN). It measures coverage of Level 1 content descriptions — nothing more.
+- **Not a validated diagnostic or standardised test** (like NAPLAN). It measures coverage of VC2 Mathematics content descriptions — nothing more.
 - **Not a school report, and not medical or educational advice.** If most codes come out "Needs work", or maths tears happen every sitting, please talk to your child's teacher (and, where relevant, your GP).
 - **Not affiliated with or endorsed by the Victorian Curriculum and Assessment Authority (VCAA) or any school.** Curriculum codes and content are © VCAA, licensed CC-BY-NC 3.0 — **non-commercial use only**.
 - **Built for parents, not classrooms.** No marking, no rostering, no class dashboards. (If you're a teacher, it can still *show* you where one child sits, but it isn't a teaching tool.)
@@ -46,7 +46,7 @@ If your child is struggling across the board, the teacher sees the whole year �
 ## Using it
 
 1. Open the app and tap **Add a child** (name, year level, avatar).
-2. Tap the child, then **Start the Level 1 check-in**. Read questions aloud if your child prefers; no timers, no coaching.
+2. Tap the child, pick their maths level (**Level 1** or **Level 2**), then **Start the check-in**. Read questions aloud if your child prefers; no timers, no coaching.
 3. The **gap dashboard** is for you (grown-ups) — traffic-light on every Level 1 content description, with at-home activities to close the gaps. Print the **A4 report** whenever you want one.
 4. Re-run the check-in once a term (plus once mid-term if you'd like). Backup regularly (⬇️ in the footer).
 
@@ -75,13 +75,15 @@ npm run preview   # serve the production build locally
 
 | Path | Purpose |
 |---|---|
-| `data/curriculum.json` | Generated VCAA curriculum data (all levels; Level 1 used by the app) |
-| `data/item-bank-level-1.json` | The 75 Level 1 assessment items (original, mapped to VC2 codes) |
-| `data/level-1-guidance.json` | Per-code parent guidance: plain words, watch-fors, at-home activities |
-| `pipeline/build_curriculum.py` | Regenerates `curriculum.json` from VCAA's CSV export |
-| `pipeline/validate_item_bank.py` | Structural checks on the item bank |
+| `data/curriculum.json` | Generated VCAA curriculum data (all levels; app bundles Level 1 + Level 2 slices) |
+| `data/curriculum.level-1.json`, `data/curriculum.level-2.json` | Slim per-level slices the app imports |
+| `data/item-bank-level-1.json` | Level 1 item bank — 75 items, 5 per content description |
+| `data/item-bank-level-2.json` | Level 2 item bank — 95 items, 5 per content description |
+| `data/level-1-guidance.json`, `data/level-2-guidance.json` | Per-code parent guidance: plain words, watch-fors, at-home activities |
+| `pipeline/build_curriculum.py` | Regenerates `curriculum.json` + per-level slices from VCAA's CSV export |
+| `pipeline/validate_item_bank.py` | Structural checks on every item bank |
 | `pipeline/make_icons.py` | Regenerates app icons |
-| `review/Level-1-Content-Pack.md` | Human-readable review pack for all Level 1 content |
+| `review/Level-1-Content-Pack.md`, `review/Level-2-Content-Pack.md` | Human-readable review packs for all content |
 | `public/llms.txt` | Agent-facing summary (what it is, limits, licence) — discoverable via `robots.txt` |
 | `src/faq.ts` | Parent FAQ (rendered in-app as FAQ modal + mirrored as JSON-LD in `index.html`) |
 | `.github/workflows/ci.yml` | On every push/PR: item-bank validation + build check |

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ITEMS, strandOfCode } from '../curriculum';
+import { getLevelCtx } from '../curriculum';
 import { loadProfiles, loadSessions, upsertSession } from '../store';
 import type { Item, Session } from '../types';
 
@@ -22,7 +22,9 @@ export default function AssessmentScreen({
   const [choiceSel, setChoiceSel] = useState<number | null>(null);
   const [orderSeq, setOrderSeq] = useState<string[]>([]);
 
-  const item: Item | undefined = ITEMS[index];
+  const ctx = useMemo(() => getLevelCtx(session?.levelId), [session?.levelId]);
+  const items = ctx.items;
+  const item: Item | undefined = items[index];
 
   useEffect(() => {
     setChoiceSel(null);
@@ -57,7 +59,7 @@ export default function AssessmentScreen({
     const next = commitPoints(item.id, item.code, points);
     setResponses(next);
     const nextIndex = index + 1;
-    if (nextIndex >= ITEMS.length) {
+    if (nextIndex >= items.length) {
       const finished: Session = { ...session, responses: next, currentIndex: index, completedAt: new Date().toISOString() };
       upsertSession(finished);
       onFinish(session.id);
@@ -79,7 +81,7 @@ export default function AssessmentScreen({
   const goBack = () => {
     if (index === 0) return;
     const prev = index - 1;
-    const prevItem = ITEMS[prev];
+    const prevItem = items[prev];
     const next = responses.filter((r) => r.itemId !== prevItem.id);
     setResponses(next);
     persist(prev, next);
@@ -90,17 +92,17 @@ export default function AssessmentScreen({
     onExit();
   };
 
-  const pct = Math.round((index / ITEMS.length) * 100);
+  const pct = Math.round((index / items.length) * 100);
 
   return (
     <>
       <div className="assess-head">
         <div className="progress" aria-hidden="true"><div style={{ width: `${pct}%` }} /></div>
-        <div className="assess-count">{Math.min(index + 1, ITEMS.length)}/{ITEMS.length}</div>
+        <div className="assess-count">{Math.min(index + 1, items.length)}/{items.length}</div>
       </div>
 
       <div className="card">
-        <span className="strand-tag">{strandOfCode(item.code)} · {item.code}</span>
+        <span className="strand-tag">{ctx.strandOfCode.get(item.code)} · {item.code}</span>
 
         {item.type === 'choice' && (
           <>
@@ -166,12 +168,12 @@ export default function AssessmentScreen({
               {index > 0 && <button className="btn btn-ghost btn-sm" onClick={goBack}>← Back</button>}
               {item.type === 'choice' && (
                 <button className="btn btn-primary" onClick={goNextChoice} disabled={choiceSel === null}>
-                  {index === ITEMS.length - 1 ? 'Finish ✓' : 'Next →'}
+                  {index === items.length - 1 ? 'Finish ✓' : 'Next →'}
                 </button>
               )}
               {item.type === 'order' && (
                 <button className="btn btn-primary" onClick={goNextOrder} disabled={orderSeq.length !== item.items.length}>
-                  {index === ITEMS.length - 1 ? 'Finish ✓' : 'Next →'}
+                  {index === items.length - 1 ? 'Finish ✓' : 'Next →'}
                 </button>
               )}
             </div>

@@ -1,13 +1,13 @@
 # Maths Map — llms.txt
 
-> Maths Map is a free, private, on-device web app for Australian parents to check their child against the Victorian Curriculum F–10 (Version 2.0) Mathematics, Level 1, and get an at-home gap report with activities. It is a parent tool, not a school tool.
+> Maths Map is a free, private, on-device web app for Australian parents to check their child against the Victorian Curriculum F–10 (Version 2.0) Mathematics, Levels 1 and 2, and get an at-home gap report with activities. It is a parent tool, not a school tool.
 
 Canonical source of truth for the curriculum: https://f10.vcaa.vic.edu.au/ (Victorian Curriculum and Assessment Authority, Australia).
 
 ## What it is
 - A static, installable PWA. No accounts, no backend, no tracking.
-- Audience: parents/guardians (not teachers) of children around Year 1 (Level 1). Australian context — Victorian Curriculum specifically.
-- Each sitting is a fixed 75-item check-in across the five Level 1 strands (Number, Algebra, Measurement, Space, Statistics), mapped to official VCAA content-description codes (e.g. VC2M1N04).
+- Audience: parents/guardians (not teachers) of children around Year 1 and Year 2 (Levels 1 and 2). Australian context — Victorian Curriculum specifically.
+- Each sitting is a fixed check-in across the strands — Level 1: 75 items / 15 content descriptions; Level 2: 95 items / 19 content descriptions — mapped to official VCAA content-description codes (e.g. VC2M1N04, VC2M2N05).
 - Results: per-code Secure / Developing / Emerging, proficiency lens (Understanding, Fluency, Reasoning, Problem-solving), gap report with at-home activities, term-by-term trend, printable A4 report.
 
 ## Transparency and limits

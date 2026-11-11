@@ -1,5 +1,6 @@
 import { scoreSession } from '../scoring';
 import { downloadResultsCsv } from '../exportCsv';
+import { getLevelCtx } from '../curriculum';
 import type { Profile, Session } from '../types';
 
 function TrendChart({ points }: { points: number[] }) {
@@ -36,8 +37,9 @@ export default function HistoryScreen({
   sessions: Session[];
   onBack: () => void;
 }) {
+  const ctx = getLevelCtx(profile.levelId);
   const done = sessions
-    .filter((s) => s.profileId === profile.id && s.completedAt)
+    .filter((s) => s.profileId === profile.id && s.completedAt && s.levelId === ctx.id)
     .slice()
     .sort((a, b) => (a.completedAt ?? '').localeCompare(b.completedAt ?? ''));
 
@@ -53,7 +55,7 @@ export default function HistoryScreen({
         <div className="avatar" style={{ background: profile.colour, fontSize: 40, width: 64, height: 64, lineHeight: '64px' }}>{profile.emoji}</div>
         <div>
           <h2 style={{ fontSize: 20 }}>{profile.name}&rsquo;s journey</h2>
-          <div className="sub">Fixed assessment, same 75 questions every sitting — so the scores are directly comparable.</div>
+          <div className="sub">{ctx.label} journey · fixed assessment, same questions every sitting — directly comparable.</div>
         </div>
       </div>
 

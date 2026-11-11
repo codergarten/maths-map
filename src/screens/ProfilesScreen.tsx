@@ -17,6 +17,7 @@ export default function ProfilesScreen({
 }) {
   const [name, setName] = useState('');
   const [yearLevel, setYearLevel] = useState('Year 1');
+  const [levelId, setLevelId] = useState<'level-1' | 'level-2'>('level-1');
   const [emoji, setEmoji] = useState(EMOJIS[0]);
   const [colour, setColour] = useState(COLOURS[0]);
   const [showForm, setShowForm] = useState(profiles.length === 0);
@@ -24,6 +25,7 @@ export default function ProfilesScreen({
   const [editingId, setEditingId] = useState<string | null>(null);
   const [eName, setEName] = useState('');
   const [eYear, setEYear] = useState('Year 1');
+  const [eLevelId, setELevelId] = useState<'level-1' | 'level-2'>('level-1');
   const [eEmoji, setEEmoji] = useState(EMOJIS[0]);
   const [eColour, setEColour] = useState(COLOURS[0]);
 
@@ -34,6 +36,7 @@ export default function ProfilesScreen({
     setShowForm(false);
     setEName(p.name);
     setEYear(p.yearLevel);
+    setELevelId(p.levelId ?? 'level-1');
     setEEmoji(p.emoji);
     setEColour(p.colour);
   };
@@ -41,9 +44,10 @@ export default function ProfilesScreen({
   const submit = () => {
     const trimmed = name.trim();
     if (!trimmed) return;
-    addProfile({ name: trimmed, yearLevel, emoji, colour });
+    addProfile({ name: trimmed, yearLevel, emoji, colour, levelId });
     setName('');
     setYearLevel('Year 1');
+    setLevelId('level-1');
     setEmoji(EMOJIS[0]);
     setColour(COLOURS[0]);
     setShowForm(false);
@@ -54,7 +58,7 @@ export default function ProfilesScreen({
     if (!editing) return;
     const trimmed = eName.trim();
     if (!trimmed) return;
-    updateProfile(editing.id, { name: trimmed, yearLevel: eYear, emoji: eEmoji, colour: eColour });
+    updateProfile(editing.id, { name: trimmed, yearLevel: eYear, emoji: eEmoji, colour: eColour, levelId: eLevelId });
     setEditingId(null);
     onChanged();
   };
@@ -83,7 +87,7 @@ export default function ProfilesScreen({
           <button key={p.id} className="profile-card" onClick={() => onSelect(p.id)} aria-label={`Open ${p.name}`}>
             <div className="avatar" style={{ background: p.colour }}>{p.emoji}</div>
             <div className="name">{p.name}</div>
-            <div className="year">{p.yearLevel}</div>
+            <div className="year">{p.yearLevel} · {(p.levelId ?? 'level-1') === 'level-2' ? 'Level 2' : 'Level 1'}</div>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', marginTop: 8 }}>
               <span
                 className="del"
@@ -135,6 +139,13 @@ export default function ProfilesScreen({
             </select>
           </div>
           <div className="form-row">
+            <label htmlFor="edit-level">Maths level (VC2)</label>
+            <select id="edit-level" value={eLevelId} onChange={(e) => setELevelId(e.target.value as 'level-1' | 'level-2')}>
+              <option value="level-1">Level 1 (≈ Year 1)</option>
+              <option value="level-2">Level 2 (≈ Year 2)</option>
+            </select>
+          </div>
+          <div className="form-row">
             <label>Avatar</label>
             <div className="emoji-pick">
               {EMOJIS.map((e) => (
@@ -183,6 +194,13 @@ export default function ProfilesScreen({
             <label htmlFor="child-year">Year level</label>
             <select id="child-year" value={yearLevel} onChange={(e) => setYearLevel(e.target.value)}>
               {YEARS.map((y) => <option key={y}>{y}</option>)}
+            </select>
+          </div>
+          <div className="form-row">
+            <label htmlFor="child-level">Maths level (VC2)</label>
+            <select id="child-level" value={levelId} onChange={(e) => setLevelId(e.target.value as 'level-1' | 'level-2')}>
+              <option value="level-1">Level 1 (≈ Year 1)</option>
+              <option value="level-2">Level 2 (≈ Year 2)</option>
             </select>
           </div>
           <div className="form-row">

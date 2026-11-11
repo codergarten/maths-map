@@ -108,15 +108,16 @@ def main() -> None:
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote {OUT} ({OUT.stat().st_size // 1024} KB)")
 
-    # Slim Level 1 slice for the app bundle (future levels can be sliced the same way).
-    slim = {**out, "levels": [l for l in out["levels"] if l["id"] == "level-1"]}
-    slim_path = OUT.parent / "curriculum.level-1.json"
-    slim_path.write_text(json.dumps(slim, indent=2, ensure_ascii=False), encoding="utf-8")
+    # Slim Level 1 + Level 2 slices for the app bundle.
+    for lid in ("level-1", "level-2"):
+        slim = {**out, "levels": [l for l in out["levels"] if l["id"] == lid]}
+        slim_path = OUT.parent / f"curriculum.{lid}.json"
+        slim_path.write_text(json.dumps(slim, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"Wrote {slim_path} ({slim_path.stat().st_size // 1024} KB)")
 
     total_cds = sum(len(s["contentDescriptions"]) for l in out["levels"] for s in l["strands"])
-    print(f"Wrote {OUT} ({OUT.stat().st_size // 1024} KB)")
-    print(f"Wrote {slim_path} ({slim_path.stat().st_size // 1024} KB)")
     print(f"Levels: {len(out['levels'])} | content descriptions: {total_cds}")
 
 if __name__ == "__main__":

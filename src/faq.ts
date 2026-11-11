@@ -49,7 +49,7 @@ export const FAQ_ENTRIES: FaqEntry[] = [
   {
     question: 'Does it cover other year levels?',
     answer:
-      'Level 1 today, by design — doing one level well beats ten levels poorly. The curriculum data covers the full F–10 range, so more levels can be added later using the same approach (and the VCAA source).',
+      'Level 1 and Level 2 (about Years 1 and 2) today. The curriculum data covers the full F–10 range, so more levels can be added later using the same approach and the VCAA source documents.',
   },
   {
     question: 'Licence and attribution?',

@@ -83,7 +83,7 @@ export default function App() {
         <span className="logo" aria-hidden="true">🗺️</span>
         <div>
           <h1>Maths Map</h1>
-          <small>Victorian Curriculum F–10 (2.0) · Mathematics · Level 1 · Australia 🇦🇺</small>
+          <small>Victorian Curriculum F–10 (2.0) · Mathematics · Australia 🇦🇺</small>
         </div>
         <div className="spacer" />
         <button className="backbtn" aria-label="Frequently asked questions" title="FAQ for parents" onClick={() => setShowFaq(true)} style={{ fontSize: 15, fontWeight: 900 }}>FAQ</button>

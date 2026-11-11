@@ -33,7 +33,7 @@ export default function GuideModal({ onClose }: { onClose: () => void }) {
         <ul className="activity-list">
           <li>Maths Map is a guided <em>check-in</em>, not a validated diagnostic like NAPLAN, and not a school report. It shows curriculum coverage, not your child’s potential.</li>
           <li>If most codes land in “Needs work”, or maths tears in every sitting, talk to your child’s teacher — a class-wide or learner-wide pattern may mean something else is going on (vision, hearing, attention, anxiety). Your teacher sees across the whole year, you see your child at the kitchen table; both pictures together are the truth.</li>
-          <li>Strong results mean “keep stretching”, not “skip ahead” — bring it up with the teacher before introducing Level 2 content at home.</li>
+          <li>Strong results mean “keep stretching”, not “skip ahead” — but you can absolutely try the next level’s check-in with the Level switch on the child’s home screen, and chat with the teacher before introducing Level 2+ content at home.</li>
         </ul>
 
         <div className="guidance-label">Your data</div>

@@ -39,7 +39,7 @@ export function deleteProfile(id: string): void {
   saveProfiles(loadProfiles().filter((p) => p.id !== id));
   saveSessions(loadSessions().filter((s) => s.profileId !== id));
 }
-export function updateProfile(id: string, patch: Partial<Pick<Profile, 'name' | 'yearLevel' | 'emoji' | 'colour'>>): Profile | null {
+export function updateProfile(id: string, patch: Partial<Pick<Profile, 'name' | 'yearLevel' | 'emoji' | 'colour' | 'levelId'>>): Profile | null {
   const profiles = loadProfiles();
   const i = profiles.findIndex((p) => p.id === id);
   if (i === -1) return null;
