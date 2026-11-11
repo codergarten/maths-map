@@ -21,8 +21,10 @@
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
 button, input, select, .chip, .profile-card, .rubric-btn, .code-chip { touch-action: manipulation; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+img, svg, video { max-width: 100%; }
 body {
   background: var(--bg);
   color: var(--ink);
@@ -30,11 +32,21 @@ body {
   font-size: 16px;
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-#root { min-height: 100vh; }
+#root { min-height: 100vh; min-height: 100svh; }
 
-.app { max-width: 720px; margin: 0 auto; padding: 14px 16px 90px; }
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding:
+    calc(12px + env(safe-area-inset-top, 0px))
+    calc(16px + env(safe-area-inset-right, 0px))
+    calc(90px + env(safe-area-inset-bottom, 0px))
+    calc(16px + env(safe-area-inset-left, 0px));
+}
 
 .topbar {
   display: flex; align-items: center; gap: 12px;
@@ -224,6 +236,60 @@ h2.section { font-size: 15px; text-transform: uppercase; letter-spacing: 1.2px; 
 .appfoot { text-align: center; color: var(--ink-soft); font-size: 11px; line-height: 1.6; padding: 18px 10px 6px; border-top: 1px solid var(--line); margin-top: 22px; }
 .appfoot a { color: var(--primary-dark); }
 .foot-actions { display: flex; gap: 8px; justify-content: center; margin-top: 8px; }
+
+/* Long curriculum text, prompts and options must wrap, never overflow */
+.item-prompt, .option-btn, .rubric-btn, .code-chip .code-desc, .std-box, .session-row .meta, .observe-script, .guidance-label, li, p, strong, .year {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.option-btn { overflow-wrap: normal; word-break: normal; } /* options wrap at word boundaries */
+
+/* Small phones (≤560px) — compress spacing and type */
+@media (max-width: 560px) {
+  .app { padding: 10px 12px calc(80px + env(safe-area-inset-bottom, 0px)); }
+  .card { padding: 13px; border-radius: 16px; }
+  .topbar { gap: 8px; padding: 8px 2px 12px; }
+  .topbar .logo { font-size: 25px; }
+  .topbar h1 { font-size: 17px; }
+  .topbar small { font-size: 10px; }
+  .backbtn { width: 40px; height: 40px; border-radius: 11px; font-size: 17px; }
+  .item-prompt { font-size: 20px; line-height: 1.3; }
+  .option-btn { font-size: 17px; padding: 13px 14px; min-height: 54px; border-radius: 13px; }
+  .chip { font-size: 18px; padding: 10px 15px; }
+  .item-sub { font-size: 12px; }
+  .profile-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 9px; }
+  .profile-card { padding: 12px 8px; }
+  .profile-card .avatar { font-size: 34px; width: 58px; height: 58px; line-height: 58px; }
+  .emoji-pick button { width: 44px; height: 44px; font-size: 22px; }
+  h2.section { font-size: 12px; margin: 14px 2px 7px; }
+  .strand-tag { font-size: 10px; padding: 3px 10px; }
+  .coverage-chip { min-width: 84px; padding: 8px 4px; }
+  .coverage-chip .n { font-size: 24px; }
+  .strand-head h3 { font-size: 15px; }
+  .code-id { min-width: 62px; font-size: 11px; }
+  .code-desc { font-size: 12px; }
+  .child-hero { gap: 10px; }
+  .child-hero h2 { font-size: 20px; }
+  .child-hero .avatar { font-size: 42px; width: 66px; height: 66px; line-height: 66px; }
+  .resume-banner { flex-wrap: wrap; }
+  .resume-banner .btn { width: 100%; }
+  .btn-lg { font-size: 16px; min-height: 58px; }
+  .result-hero .pct { font-size: 38px; }
+  .result-hero .big { font-size: 46px; }
+  .modal { border-radius: 18px 18px 0 0; padding: 14px 14px 24px; }
+  .std-box { font-size: 12.5px; padding: 12px; }
+  .session-row { flex-wrap: wrap; gap: 6px; }
+  .action-stack .btn { white-space: normal; }
+}
+
+/* Very small phones (≤360px) */
+@media (max-width: 360px) {
+  .app { padding-left: 8px; padding-right: 8px; }
+  .topbar h1 { font-size: 15px; }
+  .topbar small { font-size: 9px; }
+  .option-btn { font-size: 16px; }
+  .coverage-chip { min-width: 72px; }
+}
 
 /* ===== Print: only the print report ===== */
 @media print {
