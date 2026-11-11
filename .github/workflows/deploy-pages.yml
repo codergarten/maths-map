@@ -42,6 +42,10 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # Asks the workflow's GITHUB_TOKEN (pages: write) to create/enable
+          # the Pages site on first run, so no manual toggle is needed.
+          enablement: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
