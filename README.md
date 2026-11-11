@@ -2,9 +2,25 @@
 
 > See where your child stands in maths — and the next steps to grow.
 
+**🇦🇺 Maths Map is built for the Australian context — specifically the Victorian Curriculum.** It maps your child against the **Victorian Curriculum F–10 (Version 2.0), Mathematics**, as published by the **Victorian Curriculum and Assessment Authority (VCAA)**. Level 1 (≈ Year 1) in this version. Source of truth, always current: <https://f10.vcaa.vic.edu.au/>
+
 **Maths Map is a free, mobile-first web app for parents** of children in the early years of Australian schooling. It maps your child against the **Victorian Curriculum F–10 (2.0), Mathematics, Level 1** (≈ Year 1), shows you what they know securely, what's wobbly, and gives you simple at-home ways to build it.
 
 Sit with your child, run the 25–35 minute check-in (or pause and come back), and get a gap report you can act on — or take to the next parent–teacher night.
+
+## FAQ (short answers)
+
+**What curriculum is this?** The Victorian Curriculum F–10 (Version 2.0) Mathematics — VCAA, Australia. Source: <https://f10.vcaa.vic.edu.au/>.
+
+**Outside Victoria?** Mostly transferable (other states derive from ACARA), but codes and levels are Victorian — treat it as a check-in, not an official alignment.
+
+**Is it a test or diagnostic?** No. A parent-guided check-in. Not NAPLAN, not validated, not a judgement of potential.
+
+**Is it private?** Yes — everything stays on your device. No accounts, no servers, no analytics, no ads. Backup (⬇️) regularly.
+
+**How were the questions written?** Original items mapped 1:1 to official VCAA content descriptions and elaborations. Not peer-reviewed; use alongside school, not instead of it.
+
+**What if my child struggles broadly?** Talk to their teacher — and use Maths Map as the conversation-starter. See `llms.txt` for the agent-facing summary and `src/faq.ts` for the full in-app FAQ (also rendered for parents inside the app).
 
 ## What it does
 
@@ -62,6 +78,8 @@ npm run preview   # serve the production build locally
 | `pipeline/validate_item_bank.py` | Structural checks on the item bank |
 | `pipeline/make_icons.py` | Regenerates app icons |
 | `review/Level-1-Content-Pack.md` | Human-readable review pack for all Level 1 content |
+| `public/llms.txt` | Agent-facing summary (what it is, limits, licence) — discoverable via `robots.txt` |
+| `src/faq.ts` | Parent FAQ (rendered in-app as FAQ modal + mirrored as JSON-LD in `index.html`) |
 | `src/` | React + TypeScript PWA (Vite) |
 
 To regenerate curriculum data you need VCAA's `VC2_AS-CD-Elab_11-11-2026.csv`, downloadable from <https://f10.vcaa.vic.edu.au/>. It is not committed to this repository.

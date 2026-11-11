@@ -42,6 +42,16 @@ export default function ProfilesScreen({
         </div>
       </div>
 
+      <div className="card flat" style={{ border: '1.5px solid var(--primary-soft)', background: 'var(--primary-soft)' }}>
+        <div style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: 1, color: 'var(--primary-dark)' }}>What this is built on</div>
+        <p style={{ margin: '6px 0 4px', fontSize: 14 }}>
+          Maths Map maps your child against the <strong>Victorian Curriculum F–10 (Version 2.0), Mathematics — Australia 🇦🇺</strong>. Published by the Victorian Curriculum and Assessment Authority (VCAA).
+        </p>
+        <p style={{ margin: 0, fontSize: 12, color: 'var(--primary-dark)' }}>
+          Source &amp; authority: <a href="https://f10.vcaa.vic.edu.au/" target="_blank" rel="noreferrer">f10.vcaa.vic.edu.au</a> · it&rsquo;s the only official version. Other states differ — see the FAQ.
+        </p>
+      </div>
+
       <div className="profile-grid">
         {profiles.map((p) => (
           <button key={p.id} className="profile-card" onClick={() => onSelect(p.id)} aria-label={`Open ${p.name}`}>

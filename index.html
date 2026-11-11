@@ -4,10 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0e7490" />
-    <meta name="description" content="See where your child stands in maths — and the next steps to grow. Parent-guided Victorian Curriculum F-10 (2.0) Mathematics check-ins, gap analysis and term tracking." />
+    <meta name="description" content="Maths Map — see where your child stands in maths against the Victorian Curriculum F-10 (2.0), Australia, and the next steps to grow. Free, private, on-device maths check-ins for parents." />
     <link rel="icon" type="image/svg+xml" href="icon.svg" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <title>Maths Map</title>
+    <title>Maths Map — Victorian Curriculum maths check-ins for parents (Australia)</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Maths Map",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any (browser-based, offline-capable PWA)",
+      "url": "./",
+      "description": "A free, private, on-device web app for parents to check their child against the Victorian Curriculum F-10 (2.0) Mathematics, Level 1, and get an at-home gap report with activities.",
+      "educationalAlignment": {
+        "@type": "AlignmentObject",
+        "alignmentType": "educationalFramework",
+        "educationalFramework": "Victorian Curriculum F-10 (Version 2.0) - Mathematics",
+        "targetUrl": "https://f10.vcaa.vic.edu.au/"
+      },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What curriculum is Maths Map based on?", "acceptedAnswer": { "@type": "Answer", "text": "The Victorian Curriculum F-10 (Version 2.0) Mathematics, published by the Victorian Curriculum and Assessment Authority (VCAA), Australia. This version covers Level 1 (about Year 1). Source: f10.vcaa.vic.edu.au." } },
+        { "@type": "Question", "name": "Is this for parents outside Victoria?", "acceptedAnswer": { "@type": "Answer", "text": "Maths Map is built and checked against the Victorian document. Other Australian states and territories derive from ACARA's Australian Curriculum, so much overlaps — but codes, level names and achievement standards are Victorian. Outside Victoria, treat it as a maths check-in, not an official alignment." } },
+        { "@type": "Question", "name": "Is Maths Map a test or diagnostic assessment?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a parent-guided check-in mapped to Level 1 content descriptions — not NAPLAN, not a validated diagnostic, and not a judgement of your child's potential. Use it to spot gaps with the school for the official picture." } },
+        { "@type": "Question", "name": "Is my child's data private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Everything is stored only on your device in browser storage. No accounts, no servers, no analytics, no ads. Use Backup in the footer to keep a copy." } },
+        { "@type": "Question", "name": "Licence and attribution?", "acceptedAnswer": { "@type": "Answer", "text": "Curriculum content is © VCAA, licensed CC-BY-NC 3.0 Australia — non-commercial use with attribution. Maths Map is shared freely for non-commercial family use; not affiliated with or endorsed by VCAA, ACARA or any school." } }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

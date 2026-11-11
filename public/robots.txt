@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# LLM and agent guidance: /llms.txt
+# Canonical curriculum source: https://f10.vcaa.vic.edu.au/

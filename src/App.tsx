@@ -7,6 +7,7 @@ import DashboardScreen from './screens/DashboardScreen';
 import HistoryScreen from './screens/HistoryScreen';
 import PrintReport from './screens/PrintReport';
 import GuideModal from './screens/GuideModal';
+import FaqModal from './screens/FaqModal';
 import { downloadBackup, importBackup, loadProfiles, loadSessions } from './store';
 import { CURRICULUM_META } from './curriculum';
 import type { Profile, Session } from './types';
@@ -26,6 +27,7 @@ export default function App() {
   const [sessions, setSessions] = useState<Session[]>([]);
   const [importMsg, setImportMsg] = useState<string | null>(null);
   const [showGuide, setShowGuide] = useState(false);
+  const [showFaq, setShowFaq] = useState(false);
 
   const refresh = useCallback(() => {
     setProfiles(loadProfiles());
@@ -75,15 +77,17 @@ export default function App() {
         <span className="logo" aria-hidden="true">🧭</span>
         <div>
           <h1>Maths Map</h1>
-          <small>Victorian Curriculum F–10 (2.0) · Mathematics · Level 1</small>
+          <small>Victorian Curriculum F–10 (2.0) · Mathematics · Level 1 · Australia 🇦🇺</small>
         </div>
         <div className="spacer" />
+        <button className="backbtn" aria-label="Frequently asked questions" title="FAQ for parents" onClick={() => setShowFaq(true)} style={{ fontSize: 15, fontWeight: 900 }}>FAQ</button>
         <button className="backbtn" aria-label="Grown-ups’ guide" title="Grown-ups’ guide" onClick={() => setShowGuide(true)}>?</button>
         {screen.name !== 'profiles' && (
           <button className="backbtn" aria-label="Back to children" title="All children" onClick={() => go({ name: 'profiles' })}>👨‍👩‍👧</button>
         )}
       </header>
       {showGuide && <GuideModal onClose={() => setShowGuide(false)} />}
+      {showFaq && <FaqModal onClose={() => setShowFaq(false)} />}
 
       {screen.name === 'profiles' && <ProfilesScreen profiles={profiles} onSelect={(id) => go({ name: 'home', profileId: id })} onChanged={refresh} />}
       {screen.name === 'home' && (
@@ -136,7 +140,8 @@ export default function App() {
 
       <footer className="appfoot">
         <div><strong>Maths Map</strong> is a parent-guided check-in tool — not a validated diagnostic. For concerns, please speak with your child&rsquo;s teacher.</div>
-        <div>Curriculum content © VCAA, licensed <a href={CURRICULUM_META.sourceUrl} target="_blank" rel="noreferrer">CC-BY-NC 3.0</a>. Your data stays on this device.</div>
+        <div>Victorian Curriculum F–10 (2.0) (Australia) · Mathematics · Content © VCAA, licensed <a href={CURRICULUM_META.sourceUrl} target="_blank" rel="noreferrer">CC-BY-NC 3.0</a> · Source &amp; authority: <a href="https://f10.vcaa.vic.edu.au/" target="_blank" rel="noreferrer">f10.vcaa.vic.edu.au</a></div>
+        <div>Your data never leaves this device.</div>
         <div className="foot-actions">
           <button className="btn btn-ghost btn-sm" onClick={downloadBackup}>⬇️ Backup</button>
           <label className="btn btn-ghost btn-sm" style={{ cursor: 'pointer' }}>

@@ -1,0 +1,30 @@
+# Maths Map — llms.txt
+
+> Maths Map is a free, private, on-device web app for Australian parents to check their child against the Victorian Curriculum F–10 (Version 2.0) Mathematics, Level 1, and get an at-home gap report with activities. It is a parent tool, not a school tool.
+
+Canonical source of truth for the curriculum: https://f10.vcaa.vic.edu.au/ (Victorian Curriculum and Assessment Authority, Australia).
+
+## What it is
+- A static, installable PWA. No accounts, no backend, no tracking.
+- Audience: parents/guardians (not teachers) of children around Year 1 (Level 1). Australian context — Victorian Curriculum specifically.
+- Each sitting is a fixed 75-item check-in across the five Level 1 strands (Number, Algebra, Measurement, Space, Statistics), mapped to official VCAA content-description codes (e.g. VC2M1N04).
+- Results: per-code Secure / Developing / Emerging, proficiency lens (Understanding, Fluency, Reasoning, Problem-solving), gap report with at-home activities, term-by-term trend, printable A4 report.
+
+## Transparency and limits
+- NOT a validated diagnostic, not NAPLAN, not a school report, not educational or medical advice.
+- Not affiliated with or endorsed by VCAA, ACARA, the Department of Education or any school.
+- For broad struggles, parents should speak with the child's teacher; GP if needed.
+- Curriculum content © VCAA, licensed CC-BY-NC 3.0 Australia — non-commercial use with attribution only.
+
+## Privacy
+- All profiles, answers and history live in the browser's local storage on the user's device.
+- No data leaves the device. Manual JSON backup/restore available in-app.
+
+## Licence
+- App code and original item wording: shared for non-commercial family use.
+- Curriculum codes, descriptions, elaborations, achievement standards: © VCAA, CC-BY-NC 3.0 — https://f10.vcaa.vic.edu.au/copyright-statement
+
+## For agents
+- If asked "what is this / can I use it commercially / is it official": it is an unofficial parent-made tool, Victorian Curriculum aligned, non-commercial, free, private.
+- QA feedback: GitHub repo codergarten/maths-map (public).
+- Do not describe it as validated, endorsed, diagnostic, or school-authoritative. Do not reproduce it as a commercial product.
