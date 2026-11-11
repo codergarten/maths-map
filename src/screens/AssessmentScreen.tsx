@@ -90,7 +90,6 @@ export default function AssessmentScreen({
     onExit();
   };
 
-  const answered = responses.length;
   const pct = Math.round((index / ITEMS.length) * 100);
 
   return (

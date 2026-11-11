@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "Victorian Curriculum F-10 (2.0) - Mathematics",
+    "source": "VCAA CSV export VC2_AS-CD-Elab_11-11-2026.csv",
+    "sourceUrl": "https://f10.vcaa.vic.edu.au/overview/about",
+    "licence": "Content descriptions and elaborations © VCAA, licensed CC-BY-NC 3.0 Australia. Non-commercial use only.",
+    "generated": "2026-11-11"
+  },
+  "levels": [
+    {
+      "id": "level-1",
+      "label": "Level 1",
+      "achievementStandard": "By the end of Level 1, students connect number names, numerals and quantities, and order numbers to at least 120. They demonstrate how one- and two-digit numbers can be partitioned in different ways and that two-digit numbers can be partitioned into tens and ones. Students partition collections into equal groups and skip count in twos, fives or tens to quantify collections to at least 120. They solve problems involving addition and subtraction of numbers to 20 and use mathematical modelling to solve practical problems involving addition, subtraction, equal sharing and grouping, using calculation strategies.Students use numbers, symbols and objects, including Australian coins, to create skip counting and repeating patterns, identifying the repeating unit.Students compare and order objects and events based on the attributes of length, mass, capacity and duration, communicating their reasoning. They measure the length of shapes and objects using uniform informal units.Students make, compare and classify shapes and objects using identifiable features. They give and follow directions to move people and objects within a space.Students collect and record categorical data, create one-to-one displays, and compare and discuss the data using frequencies.",
+      "strands": [
+        {
+          "id": "number",
+          "name": "Number",
+          "contentDescriptions": [
+            {
+              "code": "VC2M1N01",
+              "stem": "Students learn to:",
+              "description": "recognise, represent and order numbers to at least 120 using physical and virtual materials, numerals, number lines and charts",
+              "elaborations": [
+                "reading, writing and naming numerals and ordering two-digit numbers from zero to at least 120, using patterns within the natural number system, including numbers that look and sound similar, for example, 16, 60, 61 and 66",
+                "using number tracks or positioning a set of numbered cards in the correct order and relative location by pegging them on an empty number line",
+                "using hundreds charts to build understanding and fluency with numbers; for example, collaboratively building a hundreds chart using cards numbered from zero to 99, or colour-coding the count of tens in a hundreds chart using one colour to represent the number of tens and another to represent the number of ones",
+                "recognising that numbers are used in all languages and cultures but may be represented differently in words and symbols (for example, through kanji numbers in Japanese and characters in Chinese) and that there are alternative numeration systems (for example, using special characters for 10 and 100 and other multiples of 10 in Japanese and Chinese numeration)"
+              ]
+            },
+            {
+              "code": "VC2M1N02",
+              "stem": "Students learn to:",
+              "description": "partition one- and two-digit numbers in different ways using physical and virtual materials, including partitioning two-digit numbers into tens and ones",
+              "elaborations": [
+                "building knowledge and understanding of the part-part-whole facts to 10, using physical and virtual materials; for example, using virtual ten-frames through a digital app or website to identify pairs of numbers that combine to make 10",
+                "using physical and virtual materials to partition numbers into counts of tens and ones; for example, recognising 35 as 3 tens and 5 ones or as 2 tens and 15 ones",
+                "using part-part-whole reasoning and physical or virtual materials to represent 24, then partitioning 24 in different ways and recording the partitions using numbers; for example, 10, 10 and 4 combine to make 24 or 10 and 14 combine to make 24"
+              ]
+            },
+            {
+              "code": "VC2M1N03",
+              "stem": "Students learn to:",
+              "description": "quantify sets of objects, to at least 120, by partitioning collections into equal groups using number knowledge and skip counting",
+              "elaborations": [
+                "counting a large collection of items using groups of fives or tens and skip counting to work out how many there are, and recording the amount and connecting the digits in the number to the grouped materials when using groups of 10",
+                "counting collections of objects, such as pencils or images of birds in a tree, by grouping them in tens to enable efficient counting, and connecting the digits in the number to the groups of tens and ones",
+                "counting a large collection of Australian $1 coins by stacking them in piles of 10, skip counting in tens and including any leftover coins to determine the total value"
+              ]
+            },
+            {
+              "code": "VC2M1N04",
+              "stem": "Students learn to:",
+              "description": "add and subtract numbers within 20, using physical and virtual materials, part-part-whole knowledge to 10 and a variety of calculation strategies",
+              "elaborations": [
+                "using drawings, physical and virtual materials, and number combinations within 10 to add and subtract collections to 20",
+                "adding and subtracting numbers within 20, using a variety of representations and strategies, such as counting on, counting back, partitioning and part-part-whole knowledge of numbers to 10; for example, using partitioning and combining $7+5=7+3+2=10+2=12$",
+                "developing and using strategies for one-digit addition and subtraction based on part-part-whole relationships for each of the numbers to 10 and subitising with physical and virtual materials; for example, 8 and 6 is the same as 8 and 2 and 4",
+                "representing story problems involving addition and subtraction of numbers within 20 using a Think Board; recognising and using + and − symbols and the equal sign (=) to represent the operations of addition and subtraction; and showing and explaining the connections between any materials used using the language of plus and minus, and the numbers within the story problem",
+                "creating and performing addition and subtraction stories told through Aboriginal and/or Torres Strait Islander dances"
+              ]
+            },
+            {
+              "code": "VC2M1N05",
+              "stem": "Students learn to:",
+              "description": "use mathematical modelling to solve practical problems involving additive situations, including simple money transactions; represent the situations with diagrams, physical and virtual materials; use calculation strategies to solve the problem",
+              "elaborations": [
+                "modelling problems involving addition and subtraction presented in stories, using a Think Board to represent the problem, solving the problem using physical materials and explaining the connections between any materials used, the Think Board diagram and the numbers within the story",
+                "modelling simple money problems involving addition and subtraction using whole dollar amounts; for example, setting up a shop and role-playing practical problems of buying and selling goods, using addition and subtraction with play money and prices in whole dollar amounts; or solving the problem 'I had $14 and was given $15 for my birthday' using addition to answer the problem",
+                "modelling a variety of different additive situations to solve practical problems; for example, keeping track of the number of people on a bus as it stops to pick up and drop off passengers or the number of people entering a lift"
+              ]
+            },
+            {
+              "code": "VC2M1N06",
+              "stem": "Students learn to:",
+              "description": "use mathematical modelling to solve practical problems involving equal sharing and grouping; represent the situations with diagrams, physical and virtual materials, and use calculation strategies to solve the problem",
+              "elaborations": [
+                "modelling problems involving repeated equal group situations, such as 'How many wheels are needed for 3 cars?', using materials and drawing a picture to show what they did, and recording the results with a number",
+                "modelling practical problems involving equal sharing situations; for example, sharing a set of dominoes between the 2 players in a game, and then counting or subitising to ensure they both have the same number of tiles",
+                "modelling money problems involving equal sharing; for example, sorting coins from a moneybox according to their denominations, sharing the coins equally between 4 people, and using counting or subitising to ensure they have equal amounts of each denomination"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "algebra",
+          "name": "Algebra",
+          "contentDescriptions": [
+            {
+              "code": "VC2M1A01",
+              "stem": "Students learn to:",
+              "description": "recognise, continue and create pattern sequences, with numbers, symbols, shapes and objects including Australian coins, formed by skip counting, initially by twos, fives and tens",
+              "elaborations": [
+                "using number charts, songs, rhymes and stories to establish skip counting sequences of twos, fives and tens",
+                "using shapes and objects to represent a growing pattern formed by skip counting; for example, using blocks or beads to represent the growing patterns 2, 4, 6, 8, 10 … and 5, 10, 15, 20 …",
+                "recognising the patterns in sequences formed by skip counting; for example, recognising that skip counting in fives starting from zero always results in either a 5 or zero as the final digit",
+                "counting by twos, fives or tens to determine how much money is in a collection of coins or notes of the same denomination, for example, 5-cent, 10-cent and $2 coins or $5 and $10 notes",
+                "using different variations of the popular Korean counting game Sam-yuk-gu for generating skip counting pattern sequences"
+              ]
+            },
+            {
+              "code": "VC2M1A02",
+              "stem": "Students learn to:",
+              "description": "recognise, continue and create repeating patterns with numbers, symbols, shapes and objects, identifying the repeating unit and recognising the importance of repetition in solving problems",
+              "elaborations": [
+                "interpreting a repeating pattern sequence created by someone else, noticing and describing the repeating part of the pattern and explaining how they know what comes next in the sequence",
+                "generalising a repeating pattern by identifying the unit of repeat and representing the elements using numbers, letters or symbols; for example, representing the repeating pattern of stamp, stamp, clap, stamp, clap, pause, stamp, stamp, clap, stamp, clap as SSCSC SSCSC …, recognising the elements that are repeating, describing the unit of repeat as SSCSC and continuing the pattern",
+                "recognising within the sequencing of natural numbers that 0–9 digits are repeated both in and between the decades and using this pattern to continue the sequence and name two-digit numbers beyond 20",
+                "identifying the repeating patterns in Aboriginal and/or Torres Strait Islander systems of counting, exploring different ways of representing numbers including oral and gestural language",
+                "considering how the making of shell or seed necklaces by Aboriginal and/or Torres Strait Islander Peoples includes practices such as sorting shells and beads based on colour, size and shape, and creating a repeating pattern sequence"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "measurement",
+          "name": "Measurement",
+          "contentDescriptions": [
+            {
+              "code": "VC2M1M01",
+              "stem": "Students learn to:",
+              "description": "compare directly and indirectly and order objects and events using attributes of length, mass, capacity and duration, communicating reasoning",
+              "elaborations": [
+                "using a piece of string to indirectly compare the length of several objects, deciding which will fit within a space, and using comparative language to describe the order (shortest, short, longer, longest)",
+                "ordering the mass of 3 or more objects, such as rocks, using hefting and balance scales, and using comparative language to explain the order (lightest, light, heavier, heaviest) and how they decided on the order",
+                "pouring sand, rice or water from one container to another to compare and order the capacity of 3 or more containers, and describing the order of the results in terms of which holds the most/least and those in between",
+                "creating sand timers from everyday items or recycled materials and comparing them to order the duration of time required for the sand to run through",
+                "investigating situations where Aboriginal and/or Torres Strait Islander Peoples estimate, compare and communicate measurements, for example, situations involving the duration of seasons, understanding animal behaviour using the length of animal tracks, or investigating capacity through Aboriginal and/or Torres Strait Islander water management techniques, such as traditional water-carrying vessels and rock holes"
+              ]
+            },
+            {
+              "code": "VC2M1M02",
+              "stem": "Students learn to:",
+              "description": "measure the length of shapes and objects using informal units, recognising that units need to be uniform and used end-to-end",
+              "elaborations": [
+                "using 2 different units (for example, icy pole sticks and pencils) to measure the length of an object (for example, a desk), and explaining why the number of units used may be different",
+                "comparing the length of 2 objects, such as a desk and a bookshelf, by laying multiple copies of a unit and counting to say which is longer and how much longer; and explaining why they should not have gaps or overlaps between the units, as this will change the length of the unit",
+                "measuring the distance between 2 locations using footsteps, comparing the results and explaining why there may be different results, for example, referring to the different lengths of footsteps as using different units",
+                "measuring and comparing the length of objects using blocks; for example, comparing the height of 2 toys by stacking blocks one on top of the other and counting how many it takes to reach the height of each object to decide which is taller"
+              ]
+            },
+            {
+              "code": "VC2M1M03",
+              "stem": "Students learn to:",
+              "description": "describe the duration and sequence of events using years, months, weeks, days and hours",
+              "elaborations": [
+                "naming, listing and using familiar units of time, such as hours, days, weeks and years",
+                "comparing the number of days in the months of the year and explaining how the months cycle from one year to the next",
+                "sequencing familiar events, including representing time, on pictorial timelines",
+                "discussing events and activities and deciding whether they would take closer to an hour, a day, a week, a month or a year; for example, it takes a day for the sun to rise and fall and rise again, but it takes less than an hour for me to walk to school",
+                "investigating durations of time represented in Aboriginal and/or Torres Strait Islander seasonal calendars"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "space",
+          "name": "Space",
+          "contentDescriptions": [
+            {
+              "code": "VC2M1SP01",
+              "stem": "Students learn to:",
+              "description": "make, compare and classify familiar shapes; recognise familiar shapes and objects in the environment, identifying the similarities and differences between them",
+              "elaborations": [
+                "classifying a collection of shapes including different circles, ovals, regular and irregular shapes, triangles and quadrilaterals, saying what is the same about the shapes in a group and what is different between the shapes in a group",
+                "selecting a shape from a small collection of shapes inside a bag and describing the shape by feel, so that others can name the shape and give reasons for their choice",
+                "comparing the different objects that can be built out of the same number of blocks or centi-cubes and discussing the differences between them",
+                "exploring string games used in storytelling by Aboriginal and/or Torres Strait Islander Peoples (for example, in Karda from the Yandruwandha Peoples of north-eastern South Australia), recognising, comparing, describing and classifying the shapes made by the string and these shapes' relationship to shapes and objects on Country/Place"
+              ]
+            },
+            {
+              "code": "VC2M1SP02",
+              "stem": "Students learn to:",
+              "description": "give and follow directions to move people and objects to different locations within a space",
+              "elaborations": [
+                "interpreting and following directions around familiar locations, and understanding the meaning and importance of the words when giving directions; for example, using words like 'forwards' and 'backwards', 'straight ahead', 'left' or 'right' to describe movement and giving instructions like 'Keep going straight until you reach the end of this passage and then turn to your right'",
+                "creating and following an algorithm consisting of a set of instructions to move an object to a different location; for example, role-playing being a robot and following step-by-step instructions given by another classmate to move from one place to another, only moving as instructed",
+                "following directions to move people into different positions within a line using both ordinal and positional language to describe their position; for example, directly comparing heights and following directions using ordinal and positional language to line up in height order",
+                "describing a familiar journey across Country/Place using directional language"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "statistics",
+          "name": "Statistics",
+          "contentDescriptions": [
+            {
+              "code": "VC2M1ST01",
+              "stem": "Students learn to:",
+              "description": "acquire and record data for categorical variables in various ways including using digital tools, objects, images, drawings, lists, tally marks and symbols",
+              "elaborations": [
+                "discussing methods of collecting data to answer a question such as 'What types of rubbish are found in the playground?', sharing ideas and trying out some of the suggested methods, reviewing the data collected and explaining how they might change the way they collect data next time",
+                "collecting and recording information on a topic of interest using lists (for example, 'How many people follow a particular football team' or 'What colour eyes each person has'), examining the data to generate some questions that it could answer, and then rearranging the data or collecting different data to answer the question",
+                "creating a tally to record data while observing events such as the year level of students using the bike shed, deciding on the possible categories before the observations are taken, and then reviewing the data afterwards to notice whether the tally was effective",
+                "using star charts with stickers or emojis to represent class data; for example, using emojis on a personal feeling chart to represent how they are feeling each day or using emojis to represent activities on the class calendar",
+                "exploring ways of representing, sharing and communicating data through stories and symbols used by Aboriginal and Torres Strait Islander Peoples"
+              ]
+            },
+            {
+              "code": "VC2M1ST02",
+              "stem": "Students learn to:",
+              "description": "represent collected data for a categorical variable using one-to-one displays and digital tools where appropriate; compare the data using frequencies and discuss the findings",
+              "elaborations": [
+                "creating a pictograph with objects or drawings; discussing the possible categories for the pictograph, arranging the objects or drawings into the categories; and then reflecting on the chosen categories and deciding whether they were helpful",
+                "translating data from a list or pictorial display into a tally chart to make counting easier; describing what the tally chart is showing, by referring to the categories; using skip counting by fives to compare the numbers within each category; and explaining how the tally chart answers the question",
+                "recognising that when there is no data for a particular category you may choose whether or not to include it in your data display, and you may use a zero or blank for that category depending on the purpose of the data collection or presentation; for example, creating a birthday calendar for the class and discussing that there are no students born in May and therefore there are no names listed",
+                "representing data with objects and drawings where one object or drawing represents one data value, and describing the displays and explaining patterns that have been created using counting strategies to determine the frequency of responses",
+                "exploring Aboriginal and/or Torres Strait Islander children's instructive games, for example, Kolap from Mer Island in the Torres Strait region, recording the outcomes, and representing and discussing the results"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

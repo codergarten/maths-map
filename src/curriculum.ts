@@ -1,4 +1,4 @@
-import curriculumRaw from '../data/curriculum.json';
+import curriculumRaw from '../data/curriculum.level-1.json';
 import itemBankRaw from '../data/item-bank-level-1.json';
 import guidanceRaw from '../data/level-1-guidance.json';
 import type { Item, Proficiency } from './types';

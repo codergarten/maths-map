@@ -56,8 +56,14 @@ export default function App() {
   if (screen.name === 'print') {
     const profile = profiles.find((p) => p.id === screen.profileId);
     if (!profile) {
-      setScreen({ name: 'profiles' });
-      return null;
+      return (
+        <div className="app">
+          <div className="card">
+            <p>That child’s profile no longer exists on this device.</p>
+            <button className="btn btn-primary" onClick={() => go({ name: 'profiles' })}>Back to children</button>
+          </div>
+        </div>
+      );
     }
     return (
       <div className="print-area">
@@ -74,7 +80,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <span className="logo" aria-hidden="true">🧭</span>
+        <span className="logo" aria-hidden="true">🗺️</span>
         <div>
           <h1>Maths Map</h1>
           <small>Victorian Curriculum F–10 (2.0) · Mathematics · Level 1 · Australia 🇦🇺</small>
