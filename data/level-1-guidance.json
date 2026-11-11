@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "level": "Level 1",
+    "licence": "Original Maths Map content. Curriculum references © VCAA, CC-BY-NC 3.0."
+  },
+  "guidance": {
+    "VC2M1N01": {
+      "plainWords": "Read, write and say numbers up to about 120, and compare which numbers are bigger and smaller.",
+      "whyItMatters": "Everything in Level 2 — numbers to 1000 and place value — is built on this foundation. Shaky ordering now means a shaky hundreds chart later.",
+      "watchFor": "Teen/tens reversal (17 vs 71); counting up from 1 instead of continuing; thinking 46 > 64 because 6 > 4.",
+      "activities": [
+        "Hundreds-chart hunt: print or draw a 0–99 chart, cover a few numbers and ask your child to name them. Build the chart from cards together first.",
+        "Number-line hops: peg numbered cards on a line in order, then blank the line and re-peg from memory.",
+        "Skip-count songs in 2s, 5s and 10s at breakfast — counting is rhythm before it is concept."
+      ]
+    },
+    "VC2M1N02": {
+      "plainWords": "Knowing that 8 is 5+3 or 4+4, and that 35 is 3 tens and 5 ones.",
+      "whyItMatters": "Part-part-whole to 10 is the engine of mental arithmetic; tens and ones is the whole of place value.",
+      "watchFor": "Only counting on from 1; not seeing that 13+2 and 13+5 both build from 13; not seeing a decade as ten ones glued together.",
+      "activities": [
+        "Ten-frame fingers: draw a 5+5 grid, ask how to fill it to make 8 (5+3) or 6 (5+1).",
+        "Moneybox piles: sort $1 coins into piles of ten and count the leftovers together.",
+        "Race to make 10: pair numbers with dice that make 10 (7 pairs with 3, 6 pairs with 4...)."
+      ]
+    },
+    "VC2M1N03": {
+      "plainWords": "Faced with a big pile, count in groups of 10 (or 5): 10, 20, 30... rather than one-by-one.",
+      "whyItMatters": "Grouping into tens is the foundation of place-value arithmetic — and multiplication is equal groups in disguise.",
+      "watchFor": "Losing count of which group they are on; fine by 10s but wobbly by 5s or 2s; not connecting leftovers to the ones digit.",
+      "activities": [
+        "Pantry count: pasta, pegs or coins into piles of ten, then count with skip counting.",
+        "Family toes: 'how many toes in this family?' (5s). Car wheels on the driveway (4s, just for fun).",
+        "Hundreds race: jump along 10, 20, 30... to 100/120 on a chalked number line."
+      ]
+    },
+    "VC2M1N04": {
+      "plainWords": "Fluent adding and subtracting within 20 — ideally by strategy (8+6 is 8+2+4), not counting from 1 every time.",
+      "whyItMatters": "All of Level 2 mental computation rests on within-20 fluency and part-part-whole knowledge.",
+      "watchFor": "Counting on from the wrong number; finger-counting every sum; not using make-10; not knowing 6+4 also means 4+6.",
+      "activities": [
+        "Ten-frame plus fingers: practise 8+5, 7+6, 13−5 with ten-frame pictures.",
+        "Dinner story problems: 'There were 9 peas on your plate, you ate 4 — how many now?' Always ask how they worked it out.",
+        "Pairs to 10 shower trivia: 'What goes with 8 to make 10?'"
+      ]
+    },
+    "VC2M1N05": {
+      "plainWords": "Turning a small money or everyday story into numbers, and solving it — real maths, not worksheet maths.",
+      "whyItMatters": "Word problems with money, time and measures all arrive together in Level 2.",
+      "watchFor": "Can compute 6+4 but freezes when it is wrapped in a story; not knowing what the question is asking.",
+      "activities": [
+        "Play shop: price 3–4 items at $1–$10, give $15 play money; your child is shopkeeper, then customer — work out change and leftovers.",
+        "Bus/lift counter: '6 people on the bus, 4 get on, 2 get off...' — they report the total at each step.",
+        "Pocket-money napkin: $10 on Monday, $2 for a juice — they track what is left."
+      ]
+    },
+    "VC2M1N06": {
+      "plainWords": "Sharing and grouping: 3 cars × 4 wheels, or sharing 15 biscuits between 3 kids.",
+      "whyItMatters": "This IS multiplication and division, in disguise, before your child knows the words.",
+      "watchFor": "Dealing into groups but losing count; not seeing remainders; confusing sharing (division) with grouping.",
+      "activities": [
+        "Deal the cards: deal a deck equally to 2–4 players, counting one-for-each aloud.",
+        "Wheel counting: 'how many wheels in 4 toy cars?' — draw it! Seeds skip counting.",
+        "Coin sharing: sort $1/$2 coins from the moneybox equally between 4 people."
+      ]
+    },
+    "VC2M1A01": {
+      "plainWords": "2, 4, 6, 8... — knowing the rhythm, extending the sequence, spotting where it goes wrong.",
+      "whyItMatters": "Skip counting underpins multiplication tables, even/odd numbers and place value in Level 2.",
+      "watchFor": "Can recite but cannot extend a sequence given on paper; mixes 5s and 10s; teen/tens slips ('fourteen' for forty).",
+      "activities": [
+        "Egg-carton counter: drop in 2 beads at a time into a 10-section egg carton, counting 2, 4, 6... to 20.",
+        "Hopscotch counting: chalked tens on the path — hop 10, 20, 30...",
+        "Coin piles: stack $1 coins in fives and count aloud to 50."
+      ]
+    },
+    "VC2M1A02": {
+      "plainWords": "ABAB and ABBABB patterns — knowing what repeats, continuing it, and inventing their own.",
+      "whyItMatters": "Algebraic thinking begins here: seeing structure and generalising, the seed of formal algebra.",
+      "watchFor": "Copying without knowing why it repeats; losing phase in longer units; confusing colour with position.",
+      "activities": [
+        "Bead necklaces: red-blue-blue pattern with beads, pasta or string — make, continue and name the unit.",
+        "Stamp-stamp-clap: perform the repeat, clap it, continue it, design your own.",
+        "Bookshelf sort: 'big book, small book, small book' — continue the arrangement."
+      ]
+    },
+    "VC2M1M01": {
+      "plainWords": "Which is longer, heavier, holds more, or takes longer — and being able to say HOW they know.",
+      "whyItMatters": "Formal units (cm, kg, mL, hours) in Level 2 all rest on this comparing intuition.",
+      "watchFor": "'It's bigger' meaning everything at once (length = weight = capacity confusion); pair-comparing but not ordering three or more.",
+      "activities": [
+        "Sand-timer race: compare homemade timers — how long does each run?",
+        "Hefting fruit: three pieces of fruit ordered lightest to heaviest; balance scales if you have them.",
+        "Pour-off: which of three cups holds most? Pour one into another to prove it."
+      ]
+    },
+    "VC2M1M02": {
+      "plainWords": "Measuring with informal units (paperclips, shoes, blocks) — same size, no gaps, end to end.",
+      "whyItMatters": "Experiencing why units must be uniform and standard is the why behind cm and m later.",
+      "watchFor": "Gaps and overlaps; different-sized units in one measurement; not recording unit size with the answer.",
+      "activities": [
+        "How long is the lounge? Measure with shoes, then with a ruler — and ask why the numbers differ.",
+        "Block towers: how many blocks high is the bookshelf? Stack and count carefully, end to end.",
+        "Two units, one desk: measure with icy-pole sticks, then with pencils — compare the totals."
+      ]
+    },
+    "VC2M1M03": {
+      "plainWords": "Morning/afternoon/night order, days of the week, months of the year, and that hours/days/weeks/years are different scales.",
+      "whyItMatters": "Level 2 time-telling to the hour/half-hour and calendar durations build directly on this.",
+      "watchFor": "Days vs months vs years order confusion; months-of-year cyclicity (what comes after December?); knowing words without scale sense.",
+      "activities": [
+        "Pictorial timeline of their life: birth, first steps, kindy, now — glue photos or draw it.",
+        "One-minute timer: let them feel 'a minute' — it changes screen time negotiations!",
+        "Calendar marking: birthdays, school terms, count the weeks to a holiday."
+      ]
+    },
+    "VC2M1SP01": {
+      "plainWords": "Naming 2-D shapes, spotting them in the real world, sorting them by features (round/straight, sides, corners).",
+      "whyItMatters": "Level 2 adds parallel/curved, symmetry and 3-D names — none of which works without confident shape naming now.",
+      "watchFor": "Everything four-sided is 'a square'; not telling corners from sides; can't state a sorting rule aloud.",
+      "activities": [
+        "Shape hunt: find three triangles, three circles and three rectangles around the house — they are everywhere (clocks, windows, signs).",
+        "Feely shapes: shapes in an opaque bag; describe by touch, guess the shape.",
+        "Laundry sort: sort socks by colour/size/texture — practises classifying by a rule in general."
+      ]
+    },
+    "VC2M1SP02": {
+      "plainWords": "Left/right/forward/back/straight — following directions and giving precise ones (being the robot).",
+      "whyItMatters": "Grid navigation and coordinates in Level 2 — and genuinely useful for games and real-world wayfinding.",
+      "watchFor": "Left/right transposed; 'over there' instead of directional language; able to follow but not yet give precise directions.",
+      "activities": [
+        "Human robot: your child directs YOU from doorway to sofa — you only move as told.",
+        "Toy treasure hunt: hide a toy; your child draws/writes 4–5 step directions to it.",
+        "Block city: build a LEGO/cardboard maze and swap navigator and builder roles."
+      ]
+    },
+    "VC2M1ST01": {
+      "plainWords": "Asking a question, collecting answers with tallies or lists, being systematic about it.",
+      "whyItMatters": "Level 2 data displays and Level 3+ graphs all assume your child can gather tidy data first.",
+      "watchFor": "Tallies not grouped by fives; deciding categories AFTER asking; double-counting people who changed their mind.",
+      "activities": [
+        "Family survey: favourite pizza topping or ice-cream flavour — they run it, they tally it.",
+        "Red car watch: tally red vs other-colour cars on a 10-minute drive.",
+        "Fridge feeling chart: a daily emoji chart for the week."
+      ]
+    },
+    "VC2M1ST02": {
+      "plainWords": "Making the one-symbol-per-vote picture and answering 'which got most?' and 'by how many?'.",
+      "whyItMatters": "Level 2 pictographs (one symbol = TWO) and Level 3 bar graphs build straight on one-to-one displays.",
+      "watchFor": "Column heights without counts; can't say how many more one has than another; shaky when a category gets zero.",
+      "activities": [
+        "Button graph: sort 30 buttons by colour into columns; compare heights, count the difference.",
+        "Feeling chart analysis: ask your child which feeling got most votes this week — by how many?",
+        "The empty column: talk about what zero votes means and why it still gets a column."
+      ]
+    }
+  }
+}
