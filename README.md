@@ -90,3 +90,14 @@ To regenerate curriculum data you need VCAA's `VC2_AS-CD-Elab_11-11-2026.csv`, d
 - Maths Map code, original items, activity ideas and design: yours to use, modify and share for non-commercial family or personal learning purposes. Not for commercial resale, and not for turning VCAA content into a paid product.
 
 *Maths Map is made by parents, for parents. It complements — never replaces — your child's teacher.*
+
+## Updating this repo (maintainer note)
+
+The canonical app lives inside the `codergarten-site` monorepo under `comms/Core/Teach/Resources/VIC Curriculum/Maths Map`. To publish to `codergarten/maths-map`:
+
+```bash
+git subtree split --prefix="comms/Core/Teach/Resources/VIC Curriculum/Maths Map" -b maths-map -force
+git push https://github.com/codergarten/maths-map.git maths-map:main
+```
+
+(The standalone repo is generated from the monorepo — don't edit it directly; changes would be overwritten on the next split.)
