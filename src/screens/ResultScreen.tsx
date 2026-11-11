@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import confetti from 'canvas-confetti';
 import { GUIDANCE, ITEMS, PROFICIENCY_LABEL, strandOfCode } from '../curriculum';
 import { scoreSession } from '../scoring';
 import type { Session } from '../types';
@@ -18,6 +20,19 @@ export default function ResultScreen({
   if (!session) return <div className="card"><p>Session not found.</p><button className="btn btn-primary" onClick={onDone}>Done</button></div>;
 
   const result = scoreSession(session);
+
+  useEffect(() => {
+    const palette = ['#0e7490', '#ea580c', '#fbbf24', '#16a34a', '#ddd6fe'];
+    let timers: number[] = [];
+    if (result.overallPercent >= 80) {
+      confetti({ particleCount: 90, spread: 70, origin: { y: 0.3 }, colors: palette, scalar: 0.9 });
+      timers.push(window.setTimeout(() => confetti({ particleCount: 60, spread: 100, origin: { y: 0.25 }, colors: palette, scalar: 0.8, startVelocity: 35 }), 350));
+    } else if (result.overallPercent >= 50) {
+      confetti({ particleCount: 40, spread: 55, origin: { y: 0.3 }, colors: palette, scalar: 0.75 });
+    }
+    return () => timers.forEach((t) => window.clearTimeout(t));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const gaps = result.codeScores.filter((c) => c.status === 'emerging');
   const developing = result.codeScores.filter((c) => c.status === 'developing');
   const weakest = result.weakestProficiency ? PROFICIENCY_LABEL[result.weakestProficiency as Proficiency] : null;

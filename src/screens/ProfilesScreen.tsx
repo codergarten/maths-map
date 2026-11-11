@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addProfile, deleteProfile } from '../store';
+import { addProfile, deleteProfile, updateProfile, deleteSessionsForProfile } from '../store';
 import type { Profile } from '../types';
 
 const EMOJIS = ['🦊', '🐼', '🐨', '🦁', '🐸', '🦄', '🐯', '🐰', '🐙', '🦖', '🐧', '⭐'];
@@ -21,6 +21,23 @@ export default function ProfilesScreen({
   const [colour, setColour] = useState(COLOURS[0]);
   const [showForm, setShowForm] = useState(profiles.length === 0);
 
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [eName, setEName] = useState('');
+  const [eYear, setEYear] = useState('Year 1');
+  const [eEmoji, setEEmoji] = useState(EMOJIS[0]);
+  const [eColour, setEColour] = useState(COLOURS[0]);
+
+  const editing = profiles.find((p) => p.id === editingId) ?? null;
+
+  const startEdit = (p: Profile) => {
+    setEditingId(p.id);
+    setShowForm(false);
+    setEName(p.name);
+    setEYear(p.yearLevel);
+    setEEmoji(p.emoji);
+    setEColour(p.colour);
+  };
+
   const submit = () => {
     const trimmed = name.trim();
     if (!trimmed) return;
@@ -30,6 +47,15 @@ export default function ProfilesScreen({
     setEmoji(EMOJIS[0]);
     setColour(COLOURS[0]);
     setShowForm(false);
+    onChanged();
+  };
+
+  const saveEdit = () => {
+    if (!editing) return;
+    const trimmed = eName.trim();
+    if (!trimmed) return;
+    updateProfile(editing.id, { name: trimmed, yearLevel: eYear, emoji: eEmoji, colour: eColour });
+    setEditingId(null);
     onChanged();
   };
 
@@ -58,30 +84,94 @@ export default function ProfilesScreen({
             <div className="avatar" style={{ background: p.colour }}>{p.emoji}</div>
             <div className="name">{p.name}</div>
             <div className="year">{p.yearLevel}</div>
-            <span
-              className="del"
-              role="button"
-              tabIndex={0}
-              onClick={(e) => {
-                e.stopPropagation();
-                if (window.confirm(`Remove ${p.name} and all their assessment history from this device?`)) {
-                  deleteProfile(p.id);
-                  onChanged();
-                }
-              }}
-              onKeyDown={(e) => { if (e.key === 'Enter') e.currentTarget.click(); }}
-            >
-              remove
-            </span>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', marginTop: 8 }}>
+              <span
+                className="del"
+                role="button"
+                tabIndex={0}
+                style={{ color: 'var(--primary-dark)' }}
+                onClick={(e) => { e.stopPropagation(); startEdit(p); }}
+                onKeyDown={(e) => { if (e.key === 'Enter') e.currentTarget.click(); }}
+              >
+                ✎ edit
+              </span>
+              <span
+                className="del"
+                role="button"
+                tabIndex={0}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (window.confirm(`Remove ${p.name} and all their assessment history from this device?`)) {
+                    deleteProfile(p.id);
+                    onChanged();
+                  }
+                }}
+                onKeyDown={(e) => { if (e.key === 'Enter') e.currentTarget.click(); }}
+              >
+                remove
+              </span>
+            </div>
           </button>
         ))}
         {profiles.length > 0 && (
-          <button className="profile-card" style={{ borderStyle: 'dashed' }} onClick={() => setShowForm((v) => !v)}>
+          <button className="profile-card" style={{ borderStyle: 'dashed' }} onClick={() => { setShowForm((v) => !v); setEditingId(null); }}>
             <div className="avatar" style={{ background: 'var(--primary-soft)', color: 'var(--primary-dark)' }}>＋</div>
             <div className="name">Add a child</div>
           </button>
         )}
       </div>
+
+      {editing && (
+        <div className="card" style={{ border: '1.5px solid var(--primary)' }}>
+          <div style={{ fontSize: 12, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: 'var(--primary-dark)' }}>Edit {editing.name}</div>
+          <div className="form-row" style={{ marginTop: 10 }}>
+            <label htmlFor="edit-name">Name</label>
+            <input id="edit-name" value={eName} autoFocus onChange={(e) => setEName(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && saveEdit()} />
+          </div>
+          <div className="form-row">
+            <label htmlFor="edit-year">Year level</label>
+            <select id="edit-year" value={eYear} onChange={(e) => setEYear(e.target.value)}>
+              {YEARS.map((y) => <option key={y}>{y}</option>)}
+            </select>
+          </div>
+          <div className="form-row">
+            <label>Avatar</label>
+            <div className="emoji-pick">
+              {EMOJIS.map((e) => (
+                <button key={e} className={e === eEmoji ? 'selected' : ''} onClick={() => setEEmoji(e)} aria-label={`Avatar ${e}`}>{e}</button>
+              ))}
+            </div>
+          </div>
+          <div className="form-row">
+            <label>Background colour</label>
+            <div className="emoji-pick">
+              {COLOURS.map((c) => (
+                <button key={c} style={{ background: c }} className={c === eColour ? 'selected' : ''} onClick={() => setEColour(c)} aria-label={`Colour ${c}`} />
+              ))}
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <button className="btn btn-primary" onClick={saveEdit} disabled={!eName.trim()}>Save changes</button>
+            <button className="btn btn-ghost" onClick={() => setEditingId(null)}>Cancel</button>
+          </div>
+          <div style={{ marginTop: 14, padding: '10px 12px', border: '1px dashed var(--emerging)', borderRadius: 12, background: 'var(--emerging-soft)' }}>
+            <div style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: 'var(--emerging)' }}>Danger zone</div>
+            <p style={{ fontSize: 13, margin: '6px 0 8px' }}>Erase all check-in answers and history for <strong>{editing.name}</strong> — the profile itself stays.</p>
+            <button
+              className="btn btn-danger btn-sm"
+              onClick={() => {
+                if (window.confirm(`Erase all check-ins and history for ${editing.name}? This cannot be undone (backup first if unsure).`)) {
+                  deleteSessionsForProfile(editing.id);
+                  setEditingId(null);
+                  onChanged();
+                }
+              }}
+            >
+              Erase check-ins
+            </button>
+          </div>
+        </div>
+      )}
 
       {showForm && (
         <div className="card">

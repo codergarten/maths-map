@@ -22,6 +22,7 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+button, input, select, .chip, .profile-card, .rubric-btn, .code-chip { touch-action: manipulation; }
 body {
   background: var(--bg);
   color: var(--ink);
@@ -59,6 +60,7 @@ h2.section { font-size: 15px; text-transform: uppercase; letter-spacing: 1.2px; 
 
 /* Buttons */
 .btn {
+  touch-action: manipulation;
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   border: none; border-radius: 14px; cursor: pointer; font-family: inherit; font-weight: 700;
   font-size: 17px; padding: 14px 20px; min-height: 56px;
@@ -121,6 +123,7 @@ h2.section { font-size: 15px; text-transform: uppercase; letter-spacing: 1.2px; 
 
 .options { display: grid; gap: 10px; }
 .option-btn {
+  touch-action: manipulation;
   border: 2px solid var(--line); background: #fff; border-radius: 16px;
   font-size: 22px; font-weight: 700; padding: 16px 18px; min-height: 62px; text-align: left;
   cursor: pointer; font-family: inherit; transition: all 0.12s ease; display: flex; align-items: center; gap: 12px;

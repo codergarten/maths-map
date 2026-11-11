@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Validate the Level 1 item bank
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: Run item bank validation
+        run: python pipeline/validate_item_bank.py
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check and build
+        run: npm run build
+
+      - name: Sanity-check built output
+        run: test -f dist/index.html && test -f dist/manifest.webmanifest && test -f dist/llms.txt && echo "dist OK"

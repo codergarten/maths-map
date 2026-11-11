@@ -39,6 +39,20 @@ export function deleteProfile(id: string): void {
   saveProfiles(loadProfiles().filter((p) => p.id !== id));
   saveSessions(loadSessions().filter((s) => s.profileId !== id));
 }
+export function updateProfile(id: string, patch: Partial<Pick<Profile, 'name' | 'yearLevel' | 'emoji' | 'colour'>>): Profile | null {
+  const profiles = loadProfiles();
+  const i = profiles.findIndex((p) => p.id === id);
+  if (i === -1) return null;
+  profiles[i] = { ...profiles[i], ...patch, name: (patch.name ?? profiles[i].name).trim() || profiles[i].name };
+  saveProfiles(profiles);
+  return profiles[i];
+}
+export function deleteSessionsForProfile(id: string): number {
+  const sessions = loadSessions();
+  const remaining = sessions.filter((s) => s.profileId !== id);
+  saveSessions(remaining);
+  return sessions.length - remaining.length;
+}
 
 export function loadSessions(): Session[] {
   return readJson<Session[]>(SESSIONS_KEY, []);

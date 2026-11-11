@@ -24,11 +24,13 @@ Sit with your child, run the 25–35 minute check-in (or pause and come back), a
 
 ## What it does
 
-- **Multi-child profiles** — every child in the family, their own history, on one device
+- **Multi-child profiles** — every child in the family, their own history, edit or erase per-child check-ins
+- **Made for touch** — big targets, offline-capable, installable, playful confetti at the finish line
 - **A full Level 1 check-in** — 75 items across the five Level 1 strands (Number, Algebra, Measurement, Space, Statistics); on-screen taps for your child, hands-on "kitchen table" tasks observed by you (counting buttons, play shop, surveys)
 - **A parent-friendly gap report** — per content description: what they can do, what to watch, and 3 at-home activities (built from the VCAA elaborations, translated for the kitchen table)
 - **Term-by-term tracking** — same items every sitting, so you can actually see the line move
 - **A printable A4 report** — strand summary, strengths, focus areas — for parent–teacher night
+- **CSV export** — all results as a spreadsheet (History → ⬇️ Download all results)
 - **Works offline, installs like an app** — no accounts, no cloud, no subscription
 - **Your data stays on your device** — nothing is uploaded; a manual Backup button exports it as a file
 
@@ -82,6 +84,9 @@ npm run preview   # serve the production build locally
 | `review/Level-1-Content-Pack.md` | Human-readable review pack for all Level 1 content |
 | `public/llms.txt` | Agent-facing summary (what it is, limits, licence) — discoverable via `robots.txt` |
 | `src/faq.ts` | Parent FAQ (rendered in-app as FAQ modal + mirrored as JSON-LD in `index.html`) |
+| `.github/workflows/ci.yml` | On every push/PR: item-bank validation + build check |
+| `.github/workflows/deploy-pages.yml` | On `main` push: build + deploy to GitHub Pages |
+| `LICENSE.md` | Code = MIT, VCAA curriculum content = CC-BY-NC 3.0 |
 | `src/` | React + TypeScript PWA (Vite) |
 
 To regenerate curriculum data you need VCAA's `VC2_AS-CD-Elab_11-11-2026.csv`, downloadable from <https://f10.vcaa.vic.edu.au/>. It is not committed to this repository.

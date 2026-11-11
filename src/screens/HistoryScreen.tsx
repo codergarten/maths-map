@@ -1,4 +1,5 @@
 import { scoreSession } from '../scoring';
+import { downloadResultsCsv } from '../exportCsv';
 import type { Profile, Session } from '../types';
 
 function TrendChart({ points }: { points: number[] }) {
@@ -115,6 +116,7 @@ export default function HistoryScreen({
         </>
       )}
 
+      <button className="btn btn-ghost btn-block" onClick={downloadResultsCsv}>⬇️ Download all results (CSV)</button>
       <button className="btn btn-ghost btn-block" onClick={onBack}>← Back to {profile.name}</button>
     </>
   );
